@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class exercice56 {
+public class Exercice56 {
     public static void main(String[] args) {
         /*
         1. Saisir une chaine et la stocker dans une variable

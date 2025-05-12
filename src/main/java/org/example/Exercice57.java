@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class exercice57 {
+public class Exercice57 {
     public static void main(String[] args) {
         /*
         1. Saisir la longueur du côté du carré et la stocker dans une variable

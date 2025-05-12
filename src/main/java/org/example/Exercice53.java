@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class exercice53 {
+public class Exercice53 {
     public static void main(String[] args) {
         /*
         1. Écrire un programme avec les variables suivantes : a, b

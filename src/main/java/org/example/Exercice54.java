@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class exercice54 {
+public class Exercice54 {
     public static void main(String[] args) {
         /*
         1. Créer une variable age et lui affecter une valeur

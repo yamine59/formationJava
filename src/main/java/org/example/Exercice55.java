@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class exercice55 {
+public class Exercice55 {
     public static void main(String[] args) {
         /*
         1. Créer un programme qui permet de calculer le volume d'un cône
