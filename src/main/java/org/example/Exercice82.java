@@ -13,22 +13,24 @@ public class Exercice82 {
         System.out.println("entrer un nombre");
         int n = scanner.nextInt();
         int somme = 0;
-        int total = 0;
+        String a = " " ;
 
         for (int i = 1; i <= n; i++) {
             somme = 0;
-            for (int j = i; somme <= n;j++) {
+            a = "";
 
+            for (int j = i; somme < n;j++) {
                 somme += j;
-                total = j;
-                System.out.println(j+"+");
-
-
-
+                if (!a.isEmpty()) {
+                    a += " + ";
+                }
+                a += j;
             }
-            System.out.println( " = "+somme);
-            System.out.println();
-
+            if (somme == n){
+                a.split("");
+                System.out.println( somme + " = "+a);
+                System.out.println();
+            }
         }
     }
 }
