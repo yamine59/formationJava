@@ -13,21 +13,19 @@ public class Exercice82 {
         System.out.println("entrer un nombre");
         int n = scanner.nextInt();
         int somme = 0;
-        String a = " " ;
+        String a = "" ;
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n/2+1; i++) {
             somme = 0;
             a = "";
-
             for (int j = i; somme < n;j++) {
-                somme += j;
                 if (!a.isEmpty()) {
                     a += " + ";
                 }
+                somme += j;
                 a += j;
             }
             if (somme == n){
-                a.split("");
                 System.out.println( somme + " = "+a);
                 System.out.println();
             }

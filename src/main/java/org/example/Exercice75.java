@@ -22,5 +22,6 @@ public class Exercice75 {
             System.out.println("caractère spécial");
         }
 
+
     }
 }
