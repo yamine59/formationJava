@@ -25,15 +25,15 @@ public class AnnuaireEntreprise {
     public void montrerEntrepriseNom() {
 
         for (int i = 0; i < entrepriseList.size(); i++) {
-            System.out.println(entrepriseList.get(i).getNom());
+            System.out.println((i)+"-"+entrepriseList.get(i).getNom());
         }
     }
 
-    public void montrerEntrepriseNom2(String nom) {
+    public void montrerEntrepriseNom2(int i) {
 
-        for (int i = 0; i < entrepriseList.size(); i++) {
-            if (entrepriseList.get(i).getNom().equals(nom)) System.out.println(entrepriseList.get(i));
-        }
+
+           System.out.println(entrepriseList.get(i));
+
 
     }
 }

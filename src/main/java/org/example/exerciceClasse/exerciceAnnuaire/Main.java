@@ -18,6 +18,7 @@ public class Main {
 
 
         int choixMenu = 0;
+        int idEntreprise = 0;
         String nom = "";
         int nsiret = 0;
         String adresse = "";
@@ -72,10 +73,10 @@ public class Main {
             if (choixMenu == 4){
                 System.out.println("Entreprise dans l'annuaire : ");
                 annuaireEntreprise.montrerEntrepriseNom();
-                System.out.println("saisir le nom de l'entreprise a afficher : ");
+                System.out.println("saisir le numero de l'entreprise a afficher : ");
 
 
-                nom = scanner.nextLine();
+                idEntreprise = scanner.nextInt();
 
 
             }
@@ -83,7 +84,7 @@ public class Main {
                 case 1-> annuaireEntreprise.ajouterEntreprise(nom,nsiret,adresse,siteWeb);
                 case 2-> annuaireEntreprise.montrerEntrepriseNom();
                 case 3-> annuaireEntreprise.montrerEntreprise();
-                case 4-> annuaireEntreprise.montrerEntrepriseNom2(nom);
+                case 4-> annuaireEntreprise.montrerEntrepriseNom2((idEntreprise));
                 case 0-> System.out.println("au revoir !!!");
                 default->System.out.println("choix invalide !!!");
             }
