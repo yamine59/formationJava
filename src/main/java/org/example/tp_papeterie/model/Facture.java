@@ -1,5 +1,7 @@
 package org.example.tp_papeterie.model;
 
+import org.example.tp_papeterie.FakeDB;
+
 import java.util.Arrays;
 
 public class Facture {
@@ -16,8 +18,8 @@ public class Facture {
         this.lignes = new Ligne[nombreLignes];
     }
 
-    public void ajouterLigne(Article_unitaire article, int quantite) {
-        lignes[cpt++] = new Ligne(article, quantite);
+    public void ajouterLigne(String refArticle, int quantite) {
+        lignes[cpt++] = new Ligne(FakeDB.database.get(refArticle), quantite);
     }
 
     public double getPrixTotal(){

@@ -28,8 +28,8 @@ public class Main {
 
         System.out.println();
         Facture facture1 = new Facture("client1","date1",1,2) ;
-        facture1.ajouterLigne(s1,1);
-        facture1.ajouterLigne(s2,10);
+        facture1.ajouterLigne("R01",1);
+        facture1.ajouterLigne("SY02",10);
         System.out.println(facture1);
 
     }
