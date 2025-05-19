@@ -31,5 +31,6 @@ public class Main {
         facture1.ajouterLigne(s1,1);
         facture1.ajouterLigne(s2,10);
         System.out.println(facture1);
+
     }
 }
