@@ -1,4 +1,4 @@
-package org.example.creational.builder;
+package org.example.exercices.exercice1.builder;
 
 public class Home {
 

@@ -1,6 +1,8 @@
-package org.example.creational.builder;
+package org.example.exercices.exercice1;
 
-import org.example.creational.builder.builder.Home;
+
+
+import org.example.exercices.exercice1.builder.Home;
 
 import java.util.Scanner;
 
@@ -15,10 +17,12 @@ public class Main {
         String color = Scanner.next();
         System.out.println("entrer si vous voulez une piscine (oui/non)");
         Scanner.nextLine();
-        String pool = Scanner.nextLine();
+        boolean pool = Scanner.hasNext("oui") ? true : false;
 
 
         Home home = new Home.Builder().nbrFloor(nbrFloor).pool(pool).typeRoof(typeRoof).color(color).build();
+
+
         System.out.println(home);
     }
 }
