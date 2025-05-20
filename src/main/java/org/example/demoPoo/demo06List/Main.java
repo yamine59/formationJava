@@ -40,6 +40,7 @@ public class Main {
         // la methode size() qui permet de retourner la taille de la liste
         System.out.println(prenoms.size());
 
+
         // parcourir avec la boucle foreach
         for (String p : prenoms){
             System.out.println(p.toUpperCase());
