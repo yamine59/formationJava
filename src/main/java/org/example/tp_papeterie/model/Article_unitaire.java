@@ -1,6 +1,6 @@
 package org.example.tp_papeterie.model;
 
-public class Article_unitaire extends Article{
+public abstract class Article_unitaire extends Article{
 
     private String nom;
     private double pu;

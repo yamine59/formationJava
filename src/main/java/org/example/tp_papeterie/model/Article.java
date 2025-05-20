@@ -1,8 +1,8 @@
 package org.example.tp_papeterie.model;
 
-public class Article {
+public abstract class Article {
     private String reference;
-
+    private int refo;
     public Article(String reference) {
         this.reference = reference;
     }
