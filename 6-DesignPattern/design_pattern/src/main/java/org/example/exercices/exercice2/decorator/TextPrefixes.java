@@ -8,7 +8,7 @@ public class TextPrefixes extends TextDecorator{
     }
 
     @Override
-    public String getText() {
-        return prefixe+ super.getText();
+    public String transform(String input) {
+        return prefixe+ super.transform(input);
     }
 }

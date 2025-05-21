@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="960c9391-cffb-4d48-9501-2106f75cecd6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/DemoEnum/Couleur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/DemoEnum/roles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1-m2i-20250414-prf-java" beforeDir="false" afterPath="$PROJECT_DIR$/../1-m2i-20250414-prf-java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-git/demo" beforeDir="false" afterPath="$PROJECT_DIR$/../2-git/demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/.idea/07 - POO Java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/Corrections/correction-exercice01-diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/Exercices/exercice01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/src/main/java/org/example/classes/AppClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/src/main/java/org/example/classes/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/src/main/java/org/example/exercices/exercice01/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/src/main/java/org/example/exercices/exercice01/classes/Ennemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/src/main/java/org/example/exercices/exercice01/classes/Sale.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/demo-uml-poo/src/main/java/org/example/exercices/exercice01/classes/Weapon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/poo-demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/poo-demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/poo-demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/poo-demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/poo-demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/poo-demo/src/main/java/classes/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/07 - POO Java/poo-demo/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Boucles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Conditions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/DemoEnum/Couleur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/DemoEnum/roles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Exemple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Exemple2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Fonctions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Interaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Operateurs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Tableaux.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Tableaux2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Tableaux3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/Variables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/demoString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/demos/util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice12.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice13.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice14.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice15.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice16.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice17.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice17Bis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice18.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/Exercice9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice15bis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice19.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice20.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice21.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/org/example/exercices/exercice8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/.idea/demoExerciceToGit.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoExerciceToGit/exercices_base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo01BasePoo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo01BasePoo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo01BasePoo/classes/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo01BasePoo/classes/Compte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo01BasePoo/classes/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo01BasePoo/classes/Personne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo02Heritage/Canide.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo02Heritage/Canide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo02Heritage/Chien.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo02Heritage/Chien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo02Heritage/Hyenne.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo02Heritage/Hyenne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo02Heritage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo02Heritage/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo03Static/Chien.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo03Static/Chien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo03Static/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo03Static/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo04Interface/ClasseDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo04Interface/ClasseDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo04Interface/ClasseDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo04Interface/ClasseDemo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo04Interface/DemoBaseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo04Interface/DemoBaseInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo04Interface/EnglishMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo04Interface/EnglishMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo04Interface/IMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo04Interface/IMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo04Interface/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo04Interface/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo04Interface/MessageV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo04Interface/MessageV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo05Generics/Boite.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo05Generics/Boite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo05Generics/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo05Generics/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo05Generics/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo05Generics/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo06List/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo06List/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo07Collection/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo07Collection/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo08Exceptions/DemoUnwatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo08Exceptions/DemoUnwatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo08Exceptions/DemoWatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo08Exceptions/DemoWatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/demoPoo/demo08Exceptions/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demoPoo/demo08Exceptions/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exercice/exerciceCollection/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice51.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice51.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice52.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice52.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice53.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice53.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice54.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice54.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice55.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice55.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice56.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice56.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice57.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice57.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice68.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice68.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice69.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice69.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice70.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice70.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice71.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice71.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice72.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice72.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice73.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice73.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice74.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice74.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice75.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice75.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice76.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice76.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice77.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice77.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice78.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice78.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice82.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice82.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice85.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice85.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice95.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice96.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice96.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Exercice97.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Exercice97.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceBase/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Boucles.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Boucles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Conditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Conditions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/DemoEnum/Couleur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/DemoEnum/roles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Exemple.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Exemple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Exemple2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Exemple2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Fonctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Fonctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Interaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Operateurs.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Operateurs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Tableaux.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Tableaux.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Tableaux2.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Tableaux2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Tableaux3.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Tableaux3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/Variables.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/Variables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/demoString.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/demoString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/demos/util.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/demos/util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice1.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice12.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice13.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice14.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice15.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice16.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice17.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice17.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice17Bis.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice17Bis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice18.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice3.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice5.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/Exercice9.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/Exercice9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice10.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice11.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice15bis.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice15bis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice19.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice20.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice20.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice21.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice4.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice6.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice7.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceBase/exercices/exercice8.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exercices/exercice8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/TodoApp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice1/Chaise.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice1/Chaise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice2/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice2/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice3/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice3/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice4/WaterTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice4/WaterTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice5/Arbre.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice5/Arbre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice5/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exercice5/Plante.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exercice5/Plante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exerciceAnnuaire/AnnuaireEntreprise.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exerciceAnnuaire/AnnuaireEntreprise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exerciceAnnuaire/Entreprise.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exerciceAnnuaire/Entreprise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exerciceAnnuaire/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exerciceAnnuaire/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exerciceBonus2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exerciceBonus2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exerciceBonus2/Salarie.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exerciceBonus2/Salarie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exerciceBonus3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exerciceBonus3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/exerciceClasse/exerciceBonus3/Pendu.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/exerciceClasse/exerciceBonus3/Pendu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/FakeDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/FakeDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/TP_Papeterie_hashMap.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/TP_Papeterie_hashMap.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/model/Article_unitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/model/Article_unitaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/model/Facture.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/model/Facture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/model/Ligne.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/model/Ligne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/model/Lot.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/model/Lot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/model/Ramette.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/model/Ramette.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/tp_papeterie/model/Stylo.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercices_base/src/main/java/org/example/Poo/tp_papeterie/model/Stylo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/creational/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/creational/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/creational/builder/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/creational/builder/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/BaseText.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/BaseText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/TextDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/TextDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/TextPrefixes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/TextPrefixes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/TextToLowerCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/TextToLowerCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/TextUppercase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/exercices/exercice2/decorator/TextUppercase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/structural/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/structural/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/structural/decorator/CheeseDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/structural/decorator/CheeseDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/structural/decorator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/structural/decorator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/structural/decorator/OliveDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/structural/decorator/OliveDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/structural/decorator/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/structural/decorator/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/structural/decorator/PizzaDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/structural/decorator/PizzaDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/structural/decorator/PlainPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6-DesignPattern/design_pattern/src/main/java/org/example/demos/structural/decorator/PlainPizza.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/exercices_base" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2xOa8iPLr0zeOhhO9RJeIwLNpJf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="960c9391-cffb-4d48-9501-2106f75cecd6" name="Changes" comment="" />
+      <created>1747811415430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747811415430</updated>
+    </task>
+    <servers />
+  </component>
+</project>

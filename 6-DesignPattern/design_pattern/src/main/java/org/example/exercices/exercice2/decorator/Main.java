@@ -3,15 +3,15 @@ package org.example.exercices.exercice2.decorator;
 public class Main {
     public static void main(String[] args) {
         Text text = new BaseText();
-        System.out.println(text.getText());
+        System.out.println(text.transform("hello"));
 
-        Text textUpperCase = new TextUppercase(text);
-        System.out.println(textUpperCase.getText());
+        text = new TextUppercase(text);
+        System.out.println(text.transform("hello tous le monde"));
 
-        Text textLowerCase = new TextToLowerCase(textUpperCase);
-        System.out.println(textLowerCase.getText());
+         text = new TextToLowerCase(text);
+        System.out.println(text.transform("hello tous le monde"));
 
-        Text textprefixe = new TextPrefixes(textLowerCase,"des");
-        System.out.println(textprefixe.getText());
+        text = new TextPrefixes(text,"des ");
+        System.out.println(text.transform("personne"));
     }
 }
