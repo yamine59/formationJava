@@ -1,6 +1,4 @@
-package org.example.demos.creational;
-
-import org.example.demos.creational.builder.Person;
+package org.example.demos.creational.builder;
 
 public class Main {
     public static void main(String[] args) {

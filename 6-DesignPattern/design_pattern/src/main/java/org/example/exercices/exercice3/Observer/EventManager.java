@@ -15,9 +15,13 @@ public class EventManager {
         this.observers.remove(observer);
     }
 
-    public void notifyObserver(String message){
+    public void createEvent(String nameEvent){
+        notifyObserver(nameEvent);
+    }
+
+    public void notifyObserver(String event){
         for (Observer observer:observers){
-            observer.update(message);
+            observer.onNotify(event);
         }
     }
 }

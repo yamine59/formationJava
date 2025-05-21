@@ -1,20 +1,21 @@
 package org.example.exercices.exercice3.Observer;
 
-import org.example.demos.behavioral.observer.Subject;
-
 public class Main {
     public static void main(String[] args) {
-        EventManager eventManager1 = new EventManager();
-        EventManager eventManager2 = new EventManager();
+        EventManager eventManager = new EventManager();
 
-        Observer observer1 = new MyObserver("observer1");
-        Observer observer2 = new MyObserver("observer2");
 
-        eventManager1.addObserver(observer1);
-        eventManager2.addObserver(observer2);
+        eventManager.addObserver(new ConsoleLogger());
+        eventManager.addObserver(new FileLogger());
 
-        eventManager1.notifyObserver("event 1");
-        eventManager2.notifyObserver("event 2");
+//        eventManager.notifyObserver("event 1 !!!");
+//        eventManager.notifyObserver("event 2 !!!");
+
+        eventManager.createEvent("pause !!!!");
+
+        eventManager.addObserver(new MailObserver());
+        eventManager.createEvent("fin de correction");
+
 
 
     }
