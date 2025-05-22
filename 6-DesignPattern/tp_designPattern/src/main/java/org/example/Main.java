@@ -13,27 +13,29 @@ public class Main {
         EventManager eventManager = new EventManager();
 
 
-       eventManager.addObserver(new NotifConserver());
+        eventManager.addObserver(new NotifConserver());
 
 
         BigFactory bigFactory = new BigFactory();
         bigFactory.enregistrerFactory("train",new TrainFactory());
         bigFactory.enregistrerFactory("voiture",new VoitureFactory());
+        bigFactory.addObserver(new NotifConserver());
 
         Toy train = bigFactory.produireJouet("train");
-        eventManager.createEvent(train.getDescription());
+
+
         train = new EmballageDecorator(train);
-        eventManager.createEvent(train.getAddDecorator());
-        eventManager.createEvent(train.getDescription());
+
 
         System.out.println();
 
         Toy voiture = bigFactory.produireJouet("voiture");
-        eventManager.createEvent(voiture.getDescription());
+
         voiture = new EmballageDecorator(voiture);
-        eventManager.createEvent(voiture.getAddDecorator());
-        eventManager.createEvent(voiture.getDescription());
-        eventManager.addObserver(new SMSObserver());
+
+
+
+
 
 
     }

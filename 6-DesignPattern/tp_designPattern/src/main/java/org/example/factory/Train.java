@@ -12,5 +12,8 @@ public class Train implements Toy {
         return "";
     }
 
-
+    @Override
+    public String toString() {
+        return "Train{}";
+    }
 }
