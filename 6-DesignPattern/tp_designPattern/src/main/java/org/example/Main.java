@@ -25,14 +25,15 @@ public class Main {
 
 
         train = new EmballageDecorator(train);
-
+        eventManager.createEvent(train.getAddDecorator());
+        eventManager.createEvent(train.getDescription());
 
         System.out.println();
 
         Toy voiture = bigFactory.produireJouet("voiture");
-
+        eventManager.createEvent(voiture.getDescription());
         voiture = new EmballageDecorator(voiture);
-
+        eventManager.createEvent(voiture.getAddDecorator());
 
 
 
