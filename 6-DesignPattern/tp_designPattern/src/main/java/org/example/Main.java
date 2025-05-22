@@ -11,10 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         EventManager eventManager = new EventManager();
-
-
         eventManager.addObserver(new NotifConserver());
-
 
         BigFactory bigFactory = new BigFactory();
         bigFactory.enregistrerFactory("train",new TrainFactory());
@@ -34,9 +31,6 @@ public class Main {
         eventManager.createEvent(voiture.getDescription());
         voiture = new EmballageDecorator(voiture);
         eventManager.createEvent(voiture.getAddDecorator());
-
-
-
 
 
     }
