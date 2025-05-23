@@ -14,3 +14,7 @@ CREATE TABLE student(
 );
 
 select * from student;
+
+select class_number from student;
+
+select count(firstname) from student ;

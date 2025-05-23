@@ -5,7 +5,7 @@ import org.example.utils.ConnectionUtils;
 import java.sql.*;
 import java.util.Scanner;
 
-public class Ihm {
+public class Ihm2Poo {
 
     public boolean start(){
         Scanner scanner = new Scanner(System.in);
@@ -47,13 +47,13 @@ public class Ihm {
         System.out.println("Entrer la date du diplome : ");
         scanner.nextLine();
         String diplome = scanner.nextLine();
+        Student student = new Student(firstname,lastname,classNumber,diplome);
 
-
-
+        System.out.println(student);
         String request = "INSERT INTO student (firstname,lastname,class_number,diplome_date) VALUES (?,?,?,?)";
         try {
             Connection connection = ConnectionUtils.getSqlConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(request);
+            PreparedStatement preparedStatement = connection.prepareStatement(request,Statement.RETURN_GENERATED_KEYS);
 
             preparedStatement.setString(1,firstname);
             preparedStatement.setString(2,lastname);
@@ -68,6 +68,12 @@ public class Ihm {
                 System.out.println("ERROR : Requete Create users");
             }
 
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+            if (resultSet.next()){
+                System.out.println("ID : "+resultSet.getInt(1));
+                student.setId(resultSet.getInt(1));
+            }
+            System.out.println(student);
 
 
         }catch (SQLException e){
