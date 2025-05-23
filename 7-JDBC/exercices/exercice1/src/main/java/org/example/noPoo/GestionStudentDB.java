@@ -1,41 +1,13 @@
-package org.example;
+package org.example.noPoo;
 
-import org.example.utils.ConnectionUtils;
+import org.example.noPoo.utils.ConnectionUtils;
 
 import java.sql.*;
 import java.util.Scanner;
 
-public class Ihm {
+public class GestionStudentDB {
 
-    public boolean start(){
-        Scanner scanner = new Scanner(System.in);
-
-
-        while (true){
-            System.out.println("\n[1] Ajouter un etudiant");
-            System.out.println("[2] Afficher la totalite des etudiant");
-            System.out.println("[3] Afficher tous les classes");
-            System.out.println("[4] Afficher les etudiant d'une classe");
-            System.out.println("[5] Supprimer un etudiant");
-            System.out.println("[0] Quitter");
-            String input = scanner.nextLine();
-
-
-            switch (input){
-                case "1" ->registerStudant();
-                case "2" ->showAllStudant();
-                case "3" ->showAllClass();
-                case "4" ->ClassStudant();
-                case "5" ->deleteStudant();
-                default -> {
-                    System.out.println("Au revoir");
-                    return false;
-                }
-            }
-        }
-    }
-
-    private void registerStudant() {
+    public void registerStudant() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Entrer un nom : ");
@@ -75,7 +47,7 @@ public class Ihm {
         }
     }
 
-    private void showAllStudant() {
+    public void showAllStudant() {
         String request = "select * from student ";
         try {
             Connection connection = ConnectionUtils.getSqlConnection();
@@ -97,7 +69,7 @@ public class Ihm {
     }
 
 
-    private void showAllClass() {
+    public void showAllClass() {
         String request = "select class_number from student ";
         try {
             Connection connection = ConnectionUtils.getSqlConnection();
@@ -114,7 +86,7 @@ public class Ihm {
         }
     }
 
-    private void ClassStudant() {
+    public void ClassStudant() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("entre le numero de la classe");
         int idClass = scanner.nextInt();
@@ -142,7 +114,7 @@ public class Ihm {
         }
     }
 
-    private void deleteStudant() {
+    public void deleteStudant() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("entrer l'id de l'etudiant a supprimer");
         int idStudent = scanner.nextInt();

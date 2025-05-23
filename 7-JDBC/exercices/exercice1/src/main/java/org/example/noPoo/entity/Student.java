@@ -1,4 +1,4 @@
-package org.example;
+package org.example.noPoo.entity;
 
 public class Student {
     private int id ;
