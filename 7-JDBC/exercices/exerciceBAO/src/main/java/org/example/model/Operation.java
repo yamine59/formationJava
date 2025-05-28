@@ -19,6 +19,7 @@ public class Operation {
         this.idClient = idClient;
     }
 
+
     public int getId() {
         return id;
     }

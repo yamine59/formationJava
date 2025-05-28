@@ -22,3 +22,6 @@ CREATE TABLE operation(
     idAccount int not null,
     foreign key (idAccount) references accounts(idAccount) on delete cascade 
 );
+
+select * from clients;
+select * from accounts;
