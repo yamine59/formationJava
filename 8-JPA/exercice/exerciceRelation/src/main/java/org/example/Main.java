@@ -3,18 +3,46 @@ package org.example;
 import org.example.dao.ComputerDao;
 import org.example.entity.Computer;
 import org.example.entity.Identification;
+import org.example.service.ComputerService;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
 
-        ComputerDao computerDao = new ComputerDao() ;
-        Identification identification = Identification.builder().macAdress("macadress").ipAdress("1021851782").build();
-        Computer computer = Computer.builder().model("model").identification(identification).build();
 
-        computerDao.createCumputer(computer);
-        computerDao.getAllCumputer();
+//        Scanner sc = new Scanner(System.in);
+//
+//        ComputerService computerService = new ComputerService();
+//
+//        System.out.println("Saisir l'id de l'ordinateur à modifier :");
+//        int id = sc.nextInt();
+//        sc.nextLine();
+//        Computer computer = null;
+//
+//        try{
+//            computer = computerService.getById(id);
+//        }catch (Exception e){
+//            System.out.println("Il n'y a pas d'ordinateur avec cet id");
+//        }
+//        System.out.println("saisir le modèle");
+//        computer.setModel(sc.nextLine());
+//
+//
+////        computer.setIdentification(new Identification());
+//        try{
+//            computerService.update(computer);
+//            System.out.println("L'ordinateur a bien été modifié");
+//        } catch (Exception e){
+//            System.out.printf(e.getMessage());
+//        }
+
+        ComputerService computerService = new ComputerService();
+//        computerService.save("MacBook", "00:00:00:00:00:00", "127.0.0.1");
+        computerService.getAll().forEach(System.out::println);
+
+
 
     }
 }
