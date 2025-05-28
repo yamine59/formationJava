@@ -20,6 +20,12 @@ public class Computer {
     private String model;
     @Embedded
     private Identification identification;
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "idproc")
+    private Processor processor;
 
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "idope")
+    private OperatingSystem operatingSystem;
 
 }
