@@ -18,14 +18,16 @@ public class Computer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String model;
+
     @Embedded
     private Identification identification;
+
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "idproc")
+    @JoinColumn(name = "idProc")
     private Processor processor;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "idope")
+    @JoinColumn(name = "idOpe")
     private OperatingSystem operatingSystem;
 
 }
