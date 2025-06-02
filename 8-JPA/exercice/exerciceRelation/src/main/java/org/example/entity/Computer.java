@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 
@@ -29,5 +30,18 @@ public class Computer {
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "idOpe")
     private OperatingSystem operatingSystem;
+
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    @JoinTable(name = "computer_project",
+    joinColumns= @JoinColumn(name = "id"),
+    inverseJoinColumns =@JoinColumn(name = "idProjet")  )
+    private List<Project>projects;
+
+
+    public void addToProject( Project project) {
+        projects.add(project);
+    }
+
+
 
 }

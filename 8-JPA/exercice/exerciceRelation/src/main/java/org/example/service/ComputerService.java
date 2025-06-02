@@ -3,10 +3,8 @@ package org.example.service;
 import org.example.dao.ComputerDao;
 import org.example.dao.OsDao;
 import org.example.dao.ProcessorDao;
-import org.example.entity.Computer;
-import org.example.entity.Identification;
-import org.example.entity.OperatingSystem;
-import org.example.entity.Processor;
+import org.example.dao.ProjectDao;
+import org.example.entity.*;
 
 import java.util.List;
 
@@ -14,10 +12,15 @@ public class ComputerService {
     ComputerDao computerDao = new ComputerDao();
     OsDao osDao = new OsDao();
     ProcessorDao processorDao = new ProcessorDao();
+    ProjectDao projectDao = new ProjectDao();
 
 
     public Computer getById(int id) {
         return computerDao.getById(id,Computer.class);
+    }
+
+    public Project getProjectById(int id) {
+        return projectDao.getById(id,Project.class);
     }
 
     public List<Computer> getAll (){
@@ -25,6 +28,10 @@ public class ComputerService {
     }
     public List<Processor> getAllProcessor (){
        return processorDao.getAll();
+    }
+
+    public List<Project> getAllProject (){
+        return projectDao.getAll();
     }
 
     public List<OperatingSystem> getAllOS (){
@@ -44,6 +51,24 @@ public class ComputerService {
         computerDao.save(computer);
     }
 
+    public void createProject(String name , String description){
+        Project project = Project.builder().name(name).description(description).build();
+        computerDao.addProject(project);
+    }
+
+    public void addToProject(List<Project> projects , Computer computer){
+        for (Project project : projects) {
+            projectDao.addProject(project,computer);
+        }
+
+    }
+
+    public void removeToProject(List<Project> projects, Computer computer){
+        for (Project project : projects) {
+            projectDao.removeProject(project,computer);
+        }
+    }
+
     public void update(Computer computer){
 
         computerDao.update(computer);
@@ -53,4 +78,6 @@ public class ComputerService {
         computerDao.remove(id,Computer.class);
 
     }
+
+
 }

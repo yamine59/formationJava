@@ -2,6 +2,8 @@ package org.example.DemoRelationbdd;
 
 import org.example.DemoRelationbdd.Component.Adress;
 import org.example.DemoRelationbdd.Component.Agence;
+import org.example.DemoRelationbdd.manyToMany.Ingredient;
+import org.example.DemoRelationbdd.manyToMany.Recette;
 import org.example.DemoRelationbdd.oneToMany.Departement;
 import org.example.DemoRelationbdd.oneToMany.Professeur;
 import org.example.DemoRelationbdd.oneToOne.Coordonnee;
@@ -41,8 +43,37 @@ public class Main {
 //        em.getTransaction().begin();
 //        em.persist(professeur);
 //        em.getTransaction().commit();
-        em.createQuery("SELECT p FROM Professeur p ", Professeur.class).getResultList().forEach(System.out::println);
+//        em.createQuery("SELECT p FROM Professeur p ", Professeur.class).getResultList().forEach(System.out::println);
 //        em.createQuery("SELECT d FROM Departement d ", Departement.class).getResultList().forEach(System.out::println);
+
+//        Ingredient ingredient = Ingredient.builder().name("tomate").price(2).build();
+//        Ingredient ingredient2 = Ingredient.builder().name("fromage").price(2).build();
+//        Ingredient ingredient3 = Ingredient.builder().name("pain").price(2).build();
+//        Recette recette1 = Recette.builder().name("pain a la tomate").build();
+//        Recette recette2 = Recette.builder().name("pain au fromage").build();
+//
+//        em.getTransaction().begin();
+//        em.persist(ingredient);
+//        em.persist(ingredient2);
+//        em.persist(ingredient3);
+//        em.persist(recette1);
+//        em.persist(recette2);
+////
+//        em.getTransaction().commit();
+
+
+//        em.getTransaction().begin();
+//        Recette recette1 = em.find(Recette.class,1);
+//        Ingredient ingredient = em.find(Ingredient.class,1);
+//        Ingredient ingredient2 = em.find(Ingredient.class,3);
+//
+//        recette1.getIngredients().add(ingredient);
+//        recette1.getIngredients().add(ingredient2);
+//
+//        em.getTransaction().commit();
+
+        Recette recette1 = em.find(Recette.class,1);
+        System.out.println(recette1);
 
     }
 }

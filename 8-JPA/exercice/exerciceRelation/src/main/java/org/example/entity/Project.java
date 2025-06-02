@@ -1,4 +1,4 @@
-package org.example.DemoRelationbdd.manyToMany;
+package org.example.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.xml.namespace.QName;
 import java.util.List;
 
 @Entity
@@ -13,22 +14,22 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Ingredient {
+public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idIng;
+    private int idProject;
     private String name;
-    private double price;
+    private String description;
 
-    @ManyToMany(mappedBy = "ingredients")
-    private List<Recette> recettes;
+    @ManyToMany(mappedBy = "projects")
+    private List<Computer>computers;
 
     @Override
     public String toString() {
-        return "Ingredient{" +
-                "price=" + price +
+        return "Project{" +
+                "description='" + description + '\'' +
                 ", name='" + name + '\'' +
-                ", idIng=" + idIng +
+                ", idProject=" + idProject +
                 '}';
     }
 }

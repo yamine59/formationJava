@@ -24,4 +24,8 @@ public class Recette {
             joinColumns = @JoinColumn(name = "idRec"),
             inverseJoinColumns = @JoinColumn(name = "idIng"))
     private List<Ingredient> ingredients;
+
+    public void addIngredient(Ingredient ingredient) {
+        this.ingredients.add(ingredient);
+    }
 }
