@@ -20,8 +20,6 @@ public abstract class BaseDAO <T> {
     }
 
     public T save(T element) {
-
-
         session.beginTransaction();
         session.saveOrUpdate(element);
         session.getTransaction().commit();

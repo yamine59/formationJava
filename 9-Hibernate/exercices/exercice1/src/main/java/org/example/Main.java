@@ -1,10 +1,13 @@
 package org.example;
 
+import org.example.controller.ihm;
 import org.example.dao.ProductDao;
 import org.example.entity.Product;
 import org.example.service.ProductService;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -45,9 +48,31 @@ public class Main {
 //          productService.delete(7);
 //          productService.delete(8);
 //          productService.delete( 9);
+//
+//        productDao.getAllProductOverThePrice(30).forEach(System.out::println);
+//        productDao.getAllProductBetween2Date(LocalDate.now().minusMonths(1),LocalDate.now()).forEach(System.out::println);
+//        productDao.getAllProductBetween2Date(LocalDate.of(2022, 2, 15), LocalDate.of(2022, 2, 20)).forEach(System.out::println);
 
-        productDao.getProductSup(30).forEach(System.out::println);
-        productDao.getBetweenDate(LocalDate.now().minusMonths(1),LocalDate.now()).forEach(System.out::println);
+        Scanner scanner = new Scanner(System.in);
+
+
+//        System.out.println("entrer le stock minimum : ");
+//        int stock = Integer.parseInt(scanner.nextLine());
+//        productDao.getNumberAndReference(stock).forEach(System.out::println);
+//
+//        System.out.println("entrer la marque : ");
+//        String brand = scanner.nextLine();
+////        productDao.getAllProductByBrand(brand).forEach(System.out::println);
+//        for (Product product : productDao.getAllProductByBrand(brand)) {
+//            System.out.println(product.getStock());
+//        }
+
+        new ihm().start();
+
+
+
+
+
 
 
 

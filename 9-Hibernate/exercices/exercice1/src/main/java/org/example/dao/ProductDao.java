@@ -28,19 +28,83 @@ public class ProductDao extends BaseDAO2<Product> {
 
     }
 
-    public List<Product> getProductSup (double sup){
-        session = sessionFactory.openSession();
-        TypedQuery<Product> query = session.createQuery("select p from Product p where p.price > :sup", Product.class);
-        query.setParameter("sup",sup);
-
-        return query.getResultList();
-
+    public List<Product> getAllProductOverThePrice (double price){
+        try{
+            session = sessionFactory.openSession();
+            TypedQuery<Product> query = session.createQuery("select p from Product p where p.price >= :price", Product.class);
+            query.setParameter("price",price);
+            return query.getResultList();
+        }catch (Exception ex){
+            return new ArrayList<>();
+        }finally {
+            session.close();
+        }
     }
-    public List<Product> getBetweenDate (LocalDate date, LocalDate date2){
-        session = sessionFactory.openSession();
-        TypedQuery<Product> query = session.createQuery("select p from Product p where p.purchasedate between :date and :date2", Product.class);
-        query.setParameter("date",date);
-        query.setParameter("date2",date2);
-        return query.getResultList();
+
+    public List<Product> getAllProductBetween2Date (LocalDate start , LocalDate end){
+        try{
+            session = sessionFactory.openSession();
+            TypedQuery<Product> query = session.createQuery("select p from Product p where p.purchasedate between :start and :end", Product.class);
+            query.setParameter("start",start);
+            query.setParameter("end",end);
+            return query.getResultList();
+        }catch (Exception ex){
+            return new ArrayList<>();
+        }finally {
+            session.close();
+        }
+    }
+
+    public List<Product> getAllProductByStock (int stock){
+        try{
+            session = sessionFactory.openSession();
+            TypedQuery<Product> query = session.createQuery("select p from Product p where p.stock >= :stock", Product.class);
+            query.setParameter("stock",stock);
+            return query.getResultList();
+        }catch (Exception ex){
+            return new ArrayList<>();
+        }finally {
+            session.close();
+        }
+    }
+
+    public List<Product> getAllProductByBrand (String brand){
+        try{
+            session = sessionFactory.openSession();
+            TypedQuery<Product> query = session.createQuery("select p from Product p where p.brand = :brand", Product.class);
+            query.setParameter("brand",brand);
+            return query.getResultList();
+        }catch (Exception ex){
+            return new ArrayList<>();
+        }finally {
+            session.close();
+        }
+    }
+
+    public List<Product> avgPrice(){
+        try{
+            session = sessionFactory.openSession();
+            TypedQuery<Product> query = session.createQuery("select avg(p.price) from Product p", Product.class);
+            return query.getResultList();
+        }catch (Exception ex){
+            return new ArrayList<>();
+        }finally {
+            session.close();
+        }
+    }
+
+    public void deleteProductByBrand(String brand){
+        try{
+            session = sessionFactory.openSession();
+            session.beginTransaction();
+            TypedQuery<Product> query = session.createQuery("delete from Product p where p.brand = :brand", Product.class);
+            query.setParameter("brand",brand);
+            query.executeUpdate();
+            session.getTransaction().commit();
+        }catch (Exception ex){
+            session.getTransaction().rollback();
+        }finally {
+            session.close();
+        }
     }
 }

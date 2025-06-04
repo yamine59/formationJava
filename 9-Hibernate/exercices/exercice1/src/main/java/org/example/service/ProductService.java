@@ -23,4 +23,22 @@ public class ProductService {
     public boolean delete(int id) {
         return new ProductDao().delete(id);
     }
+    public List<Product> getAllProductByBrand (String brand){
+        return new ProductDao().getAllProductByBrand(brand);
+    }
+    public List<Product> getAllProductOverThePrice (double price){
+        return new ProductDao().getAllProductOverThePrice(price);
+    }
+    public List<Product> getAllProductBetween2Date(LocalDate start , LocalDate end){
+        return new ProductDao().getAllProductBetween2Date(start , end);
+    }
+    public List<Product> getAllProductByStock (int stock){
+        return new ProductDao().getAllProductByStock(stock);
+    }
+    public List<Product> avgPrice(){
+        return new ProductDao().avgPrice();
+    }
+    public void deleteProductByBrand(String brand){
+        new ProductDao().deleteProductByBrand(brand);
+    }
 }

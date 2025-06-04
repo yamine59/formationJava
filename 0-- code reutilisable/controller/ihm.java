@@ -1,14 +1,14 @@
-package org.example.ihm;
+package org.example.controller;
 
 
 import java.util.Scanner;
 
-public class IHM {
+public class ihm {
     private Scanner scanner;
 
 //    private ProductService productService = new ProductService();
 
-    public IHM() {
+    public ihm() {
         scanner = new Scanner(System.in);
     }
 
