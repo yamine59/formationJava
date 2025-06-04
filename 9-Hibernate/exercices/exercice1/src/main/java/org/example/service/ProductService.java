@@ -1,44 +1,79 @@
 package org.example.service;
 
+import org.example.dao.CommentDao;
+import org.example.dao.ImageDao;
 import org.example.dao.ProductDao;
+import org.example.entity.Comment;
+import org.example.entity.Image;
 import org.example.entity.Product;
 
 import java.time.LocalDate;
 import java.util.List;
 
 public class ProductService {
-    public Product save(String brand, String reference, LocalDate purchasedate, double price, int stock) {
-        Product product = Product.builder().brand(brand).reference(reference).purchasedate(purchasedate).price(price).stock(stock).build();
-        return new ProductDao().save(product);
+    ProductDao productDao = new ProductDao();
+    ImageDao imageDao = new ImageDao();
+    CommentDao commentDao = new CommentDao();
+    public Product save(String brand, String reference, LocalDate purchaseDate, double price, int stock) {
+        Product product = Product.builder().brand(brand).reference(reference).purchasedate(purchaseDate).price(price).stock(stock).build();
+        return productDao.save(product);
     }
+
     public void update(Product product) {
-        new ProductDao().save(product);
+        productDao.save(product);
     }
+
     public Product get(int id) {
-        return new ProductDao().get(id);
+        return productDao.get(id);
+
     }
+
     public List<Product> getAll() {
-        return new ProductDao().get();
+        return productDao.get();
     }
-    public boolean delete(int id) {
-        return new ProductDao().delete(id);
+
+    public void delete(int id) {
+        productDao.delete(id);
     }
+
+    public void addImageToProduct(int idProduct,String url) {
+        Image image = Image.builder().url(url).build();
+        Product product = productDao.get(idProduct);
+        image.setProduct(product);
+        imageDao.save(image);
+
+    }
+
+    public void addCommentToProduct(int idProduct,String content,LocalDate date,int note) {
+        Comment comment = Comment.builder().content(content).date(date).note(note).build();
+        Product product = productDao.get(idProduct);
+        comment.setProduct(product);
+        commentDao.save(comment);
+
+    }
+
+
     public List<Product> getAllProductByBrand (String brand){
-        return new ProductDao().getAllProductByBrand(brand);
+        return productDao.getAllProductByBrand(brand);
     }
+
     public List<Product> getAllProductOverThePrice (double price){
-        return new ProductDao().getAllProductOverThePrice(price);
+        return productDao.getAllProductOverThePrice(price);
     }
+
     public List<Product> getAllProductBetween2Date(LocalDate start , LocalDate end){
-        return new ProductDao().getAllProductBetween2Date(start , end);
+        return productDao.getAllProductBetween2Date(start , end);
     }
-    public List<Product> getAllProductByStock (int stock){
-        return new ProductDao().getAllProductByStock(stock);
+
+    public List<Product> getIdAndRefByStock (int stock){
+        return productDao.getIdAndRefByStock(stock);
     }
+
     public List<Product> avgPrice(){
-        return new ProductDao().avgPrice();
+        return productDao.avgPrice();
     }
+
     public void deleteProductByBrand(String brand){
-        new ProductDao().deleteProductByBrand(brand);
+        productDao.deleteProductByBrand(brand);
     }
 }

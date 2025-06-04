@@ -1,12 +1,16 @@
 package org.example;
 
 import org.example.controller.ihm;
+import org.example.dao.CommentDao;
 import org.example.dao.ProductDao;
+import org.example.entity.Comment;
 import org.example.entity.Product;
 import org.example.service.ProductService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -28,11 +32,11 @@ public class Main {
 //        productDao.save(product5);
 
 
-//
-//        productService.save("brand 2", "reference 2", LocalDate.now(), 20, 200);
-//        productService.save("brand 3", "reference 3", LocalDate.now(), 30, 300);
-//        productService.save("brand 5554", "reference 4", LocalDate.now(), 40, 400);
-//        productService.save("brand 5", "reference 5", LocalDate.now(), 50, 500);
+
+        productService.save("brand 2", "reference 2", LocalDate.now(), 20, 200);
+        productService.save("brand 3", "reference 3", LocalDate.now(), 30, 300);
+        productService.save("brand 5554", "reference 4", LocalDate.now(), 40, 400);
+        productService.save("brand 5", "reference 5", LocalDate.now(), 50, 500);
 
 //        productDao.get(2, Product.class);
 //        productDao.delete(productDao.get(3, Product.class));
@@ -69,9 +73,17 @@ public class Main {
 
         new ihm().start();
 
+//
+//         productService.addCommentToProduct(4,"test", LocalDate.now(), 1);
+//         productService.addCommentToProduct(4,"test", LocalDate.now(), 1);
+//         productService.addCommentToProduct(3,"test", LocalDate.now(), 4);
+//         productService.addCommentToProduct(3,"test", LocalDate.now(), 2);
+//         productService.addCommentToProduct(4,"test", LocalDate.now(), 4);
 
 
+//        productService.addImageToProduct(4,"test");
 
+//        productDao.getProductToAvg(1).forEach(System.out::println);
 
 
 

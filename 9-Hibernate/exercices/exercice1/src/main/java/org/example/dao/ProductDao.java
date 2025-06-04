@@ -19,6 +19,7 @@ public class ProductDao extends BaseDAO2<Product> {
     public List<Product> get() {
         try{
             session = sessionFactory.openSession();
+            System.out.println(session);
             return session.createQuery("select p from Product p", Product.class).getResultList();
         }catch (Exception ex){
             return new ArrayList<>();
@@ -55,7 +56,7 @@ public class ProductDao extends BaseDAO2<Product> {
         }
     }
 
-    public List<Product> getAllProductByStock (int stock){
+    public List<Product> getIdAndRefByStock (int stock){
         try{
             session = sessionFactory.openSession();
             TypedQuery<Product> query = session.createQuery("select p from Product p where p.stock >= :stock", Product.class);
@@ -106,5 +107,24 @@ public class ProductDao extends BaseDAO2<Product> {
         }finally {
             session.close();
         }
+    }
+
+    public List<Product> getProductToAvg(double note) {
+        try{
+            System.out.println(note);
+            session = sessionFactory.openSession();
+            TypedQuery<Product> query = session.createQuery("select p from Product p JOIN p.comments c group by p.id having avg(c.note) >= :note", Product.class);
+            query.setParameter("note",note);
+            System.out.println("tets");
+            System.out.println(query.getResultList());
+            List<Product> products = query.getResultList();
+            return products;
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+            return new ArrayList<>();
+        }finally {
+            session.close();
+        }
+
     }
 }
