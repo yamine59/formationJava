@@ -11,8 +11,7 @@ public class ProductDao extends BaseDao<Product>{
     }
 
     public List<Product> getProductsByType(String type) {
-        List<Product> products = em.createQuery("SELECT p FROM Product p").getResultList();
-        products.removeIf(product -> !product.getClass().getSimpleName().equals(type));
+        List<Product> products = em.createNativeQuery("SELECT * FROM Product where DTYPE  = ?", Product.class).setParameter(1, type).getResultList();
         return products;
     }
 

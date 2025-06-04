@@ -1,10 +1,8 @@
 package org.example.Dao;
 
-import org.example.entity.Product;
 import org.example.util.DatabaseManager;
 
 import javax.persistence.EntityManager;
-import java.util.List;
 
 public abstract class BaseDao<T> {
 
