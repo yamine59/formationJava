@@ -25,34 +25,34 @@ public class ihm {
             choix = scanner.nextLine();
             switch (choix) {
                 case "1":
-                    addProduct();
+                    new AddProduct().start();
                     break;
                 case "2":
-                    updateProduct();
+                    new UpdateProduct().start();
                     break;
                 case "3":
-                    deleteProduct();
+                    new DeleteProduct().start();
                     break;
                 case "4":
-                    getProduct();
+                    new GetProduct().getProduct();
                     break;
                 case "5":
-                    getAllProduct();
+                    new GetProduct().getAllProduct();
                     break;
                 case "6":
-                    getAllProductByBrand();
+                    new GetProduct().getAllProductByBrand();
                     break;
                 case "7":
-                    getAllProductByStock();
+                    new GetProduct().getAllProductByStock();
                     break;
                 case "8":
-                    getAllProductOverThePrice();
+                    new GetProduct().getAllProductOverThePrice();
                     break;
                 case "9":
-                    getAllProductBetween2Date();
+                    new GetProduct().getAllProductBetween2Date();
                     break;
                 case "10":
-                    avgPrice();
+                    new GetProduct().avgPrice();
                     break;
                 case "0":
                     System.out.println("Quitter");
@@ -78,99 +78,11 @@ public class ihm {
 
     }
 
-    private void addProduct() {
-        System.out.println("Ajouter un produit : ");
-        System.out.println("Brand : ");
-        String brand = scanner.nextLine();
-        System.out.println("Reference : ");
-        String reference = scanner.nextLine();
-        System.out.println("Price : ");
-        double price = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.println("Stock : ");
-        int stock = scanner.nextInt();
-        scanner.nextLine();
-        productService.save(brand,reference, LocalDate.now(),price,stock);
 
-    }
 
-    public void updateProduct() {
-        System.out.println("Modifier un produit : ");
-        System.out.println("entrez l'id du produit a modifier: ");
-        int id = scanner.nextInt();
-        Product product = productService.get(id);
-        scanner.nextLine();
 
-        System.out.println("Brand : ");
 
-        String brand = scanner.nextLine();
-        System.out.println("Reference : ");
-        String reference = scanner.nextLine();
-        System.out.println("Price : ");
-        double price = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.println("Stock : ");
-        int stock = scanner.nextInt();
-        scanner.nextLine();
-        product.setBrand(brand);
-        product.setReference(reference);
-        product.setPurchasedate(LocalDate.now());
-        product.setPrice(price);
-        product.setStock(stock);
-        productService.update(product);
-    }
 
-    public void deleteProduct() {
-        System.out.println("Supprimer un produit : ");
-        System.out.println("entrez l'id du produit a supprimer: ");
-        int id = scanner.nextInt();
-        scanner.nextLine();
-        productService.delete(id);
-    }
 
-    public void getProduct() {
-        System.out.println("Afficher un produit : ");
-        System.out.println("entrez l'id du produit a afficher: ");
-        int id = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println(productService.get(id));
-    }
-
-    public void getAllProduct() {
-        productService.getAll().forEach(System.out::println);
-    }
-
-    public void getAllProductBetween2Date() {
-        System.out.println("Entrer la date de debut : ");
-        LocalDate start = LocalDate.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-        System.out.println("Entrer la date de fin : ");
-        LocalDate end = LocalDate.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-
-        productService.getAllProductBetween2Date(start,end).forEach(System.out::println);
-    }
-
-    public void getAllProductOverThePrice() {
-        System.out.println("Entrer le prix : ");
-        double price = scanner.nextDouble();
-        scanner.nextLine();
-        productService.getAllProductOverThePrice(price).forEach(System.out::println);
-    }
-
-    public void getAllProductByBrand() {
-        System.out.println("Entrer la marque : ");
-        String brand = scanner.nextLine();
-        productService.getAllProductByBrand(brand).forEach(System.out::println);
-    }
-
-    public void getAllProductByStock() {
-        System.out.println("Entrer le stock : ");
-        int stock = scanner.nextInt();
-        scanner.nextLine();
-        productService.getAllProductByStock(stock).forEach(System.out::println);
-    }
-
-    public void avgPrice() {
-        System.out.println(productService.avgPrice());
-    }
 
 }
