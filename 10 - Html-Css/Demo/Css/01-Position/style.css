@@ -1,0 +1,55 @@
+html,body{
+    margin: 0;
+}
+
+body{
+    height: 200vh;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+}
+
+.box[data-color="red"]{
+    background-color: red;
+}
+
+.box[data-color="green"]{
+    background-color: green;
+}
+
+.box[data-color="blue"]{
+    background-color: blue;
+}
+
+.box[data-color="yellow"]{
+    background-color: yellow;
+}
+
+.box[data-color="purple"]{
+    background-color: purple;
+}
+
+
+#first{
+    display: inline;
+}
+
+
+#third{
+    position: sticky;
+    top:0;
+}
+
+#fourth{
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+
+#fifth{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}

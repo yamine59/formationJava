@@ -1,0 +1,41 @@
+html,body{
+    margin: 0;  
+}
+
+.gridArea{
+    display: grid;
+    height: 500px;
+    grid-template-areas: 
+    "boxFirst boxFirst  otherBox"
+    "boxFirst boxFirst otherBox"
+    "finalBox finalBox finalBox"
+    "box1 box2 box3";
+    color: black;
+}
+
+.box {
+    grid-area: boxFirst;
+    background-color: red;
+}
+
+.otherBox {
+    grid-area: otherBox;
+    background-color: blue;
+}
+
+.finalBox {
+    grid-area: finalBox;
+    background-color: green;
+}
+.box1 {
+    grid-area: box1;
+    background-color: yellow;
+}
+.box2 {
+    grid-area: box2;
+    background-color: purple;
+}
+.box3 {
+    grid-area: box3;
+    background-color: black;
+}

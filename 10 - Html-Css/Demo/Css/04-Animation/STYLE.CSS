@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.animated-box{
+    height: 200px;
+    width: 200px;
+    background-color: royalblue;
+}
+.animated-box:hover{
+    animation: mon-animation2 10s ease-in-out 0.5s infinite alternate ;
+}
+
+@keyframes mon-animation {
+    from{
+        transform: translate(0);
+        background-color: red;
+    }
+    to{
+        transform: scale(2) rotate(1turn);
+        background-color: green;
+    }
+}
+
+@keyframes mon-animation2 {
+    0%{
+        transform: translatey(0);
+        background-color: red;
+    }
+    50%{
+        transform: scale(2) rotate(0.5turn) translate(80px);
+        background-color: green;
+    }
+    100%{
+        transform: translate(80px) ;
+        background-color: red;
+    }
+
+}

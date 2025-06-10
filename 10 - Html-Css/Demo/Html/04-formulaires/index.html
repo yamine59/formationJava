@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+</head>
+<body>
+    
+    <form action="#" method="get">
+
+        <fieldset>
+            <legend>Informations : </legend>
+            <label for="mr">Mr :</label>
+            <input type="radio" name="genre" id="mr" value="Mr" checked>
+            <label for="mme">Mme :</label>
+            <input type="radio" name="genre" id="mme" value="Mme">
+
+            <div>   
+                <label for="prenom">Prenom :</label>
+                <input type="text" name="prenom" id="prenom" placeholder="prénom">
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" id="nom" placeholder="nom">
+            </div>     
+        </fieldset>
+
+        <fieldset>
+            <legend>Authentification :</legend>
+            <input type="email" name="email" id="email" placeholder="Email" >
+            <input type="password" name="mdp" id="mdp">
+        </fieldset>
+
+        <select name="pays" id="pays">
+            <option value="france">France</option>
+            <option value="italie">Italie</option>
+            <option value="belgique">Belgique</option>
+            <option value="allemagne">Allemagne</option>
+        </select>
+
+        <div>
+            <label for="terms">Souhaitez vous recevoir la newsletter</label>
+            <input type="checkbox" name="terms" id="terms" checked>
+        </div>
+
+        <textarea name="message" id=" message" placeholder="Saisir votre message" maxlength="5"   rows="5"
+        cols="30"></textarea>
+
+        <input type="file">
+
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,82 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+   
+}
+
+.orangeBox{
+    background-color: orange;
+}
+.ecran{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    
+    border: solid 1px black;
+}
+
+.grid{
+    display: grid;
+    grid-template:repeat(6,1fr) / repeat(4,1fr);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+ 
+
+}
+
+.grid>div{
+    border: solid 0.5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid>div:hover{
+    cursor: pointer;
+    background-color: rgb(236, 240, 253);
+}
+.grid>div[class="orangeBox"]:hover{
+    cursor: pointer;
+    background-color: rgb(255, 136, 0);
+}
+.grid>div[class="ecran"]:hover{
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    cursor: default;
+}
+.ecran{
+    grid-column: 1/5;
+    height: 20vh;
+}
+
+#egal{
+    grid-column: 3/5;
+    
+}
+
+@media screen and (min-width: 600px){
+    container{
+       
+        width: 400px;
+        height: 500px;
+    }
+}

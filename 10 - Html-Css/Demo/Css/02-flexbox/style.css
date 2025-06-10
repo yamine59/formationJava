@@ -1,0 +1,40 @@
+:root{
+    --spacing:1rem;
+}
+
+body{
+    min-height: 100dvh;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing);
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.column{
+    display: flex;
+    flex-flow: column-reverse wrap;
+    align-items :flex-end;
+    gap: var(--spacing);
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(82, 21, 21);
+    color: white;
+    text-align: center;
+}
+
+/* .box:first-child{
+    order: 1;
+}
+
+.box:last-child{
+    order: -1;
+} */
