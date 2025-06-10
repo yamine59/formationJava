@@ -1,0 +1,27 @@
+h1 {
+    font-size: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Agency FB";
+    border-radius: 10px;
+    text-transform: uppercase;
+    color:white;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    background: linear-gradient(245deg, purple, orange, green, red, blue, orange, blue);
+    background-size: 1800% 1800%;
+
+    animation: AnimationName 100s ease-in-out infinite ;
+}
+
+@keyframes AnimationName {
+    0%{background-position:10% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+
+}

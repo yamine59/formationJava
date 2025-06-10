@@ -10,5 +10,8 @@
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 <a href="monservlet">mon servlet</a>
+<a href="design">design</a>
+<a href="variable">variable</a>
+
 </body>
 </html>
