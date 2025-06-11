@@ -9,11 +9,12 @@
 <html>
 <head>
     <title>Title</title>
-    <%@include file="/WEB-INF/style.jsp"%>
+    <%@include file="/WEB-INF/cssImport.jsp"%>
 </head>
 <body>
 <h1>
   je suis la page 3
 </h1>
+<%@include file="/WEB-INF/return.jsp"%>
 </body>
 </html>
