@@ -1,0 +1,1 @@
+<button type="button" class="btn btn-primary w-100 mb-3" onclick="window.location.href = '${pageContext.request.contextPath}/index.jsp'">Accueil</button>

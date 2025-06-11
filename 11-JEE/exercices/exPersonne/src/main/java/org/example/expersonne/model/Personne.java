@@ -1,4 +1,4 @@
-package org.example.expersonne.entity;
+package org.example.expersonne.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
