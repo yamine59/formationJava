@@ -1,4 +1,4 @@
-package org.example.gestionchien.dao;
+package org.example.gestionchien.repository;
 
 
 import org.example.gestionchien.entity.Dog;
@@ -7,8 +7,8 @@ import org.example.gestionchien.util.SessionFactorySingleton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DogDao extends BaseDAO<Dog>{
-    public DogDao() {
+public class DogRepo extends BaseRepository<Dog> {
+    public DogRepo() {
         super(SessionFactorySingleton.getSessionFactory(), Dog.class);
     }
 
@@ -16,8 +16,7 @@ public class DogDao extends BaseDAO<Dog>{
     public List<Dog> get() {
         try{
             session = sessionFactory.openSession();
-            System.out.println(session);
-            return session.createQuery("select e from Dog e order by e.id desc", Dog.class).getResultList();
+            return session.createQuery("from Dog e order by e.id desc", Dog.class).getResultList();
         }catch (Exception ex){
             return new ArrayList<>();
         }finally {

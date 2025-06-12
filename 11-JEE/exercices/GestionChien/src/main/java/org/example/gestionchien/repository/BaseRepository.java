@@ -1,4 +1,4 @@
-package org.example.gestionchien.dao;
+package org.example.gestionchien.repository;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -6,13 +6,13 @@ import org.hibernate.SessionFactory;
 import java.util.List;
 
 
-public abstract class BaseDAO<T> {
+public abstract class BaseRepository<T> {
 
     protected SessionFactory sessionFactory;
     protected Class<T> type;
     protected Session session;
 
-    public BaseDAO(SessionFactory sessionFactory, Class<T> type) {
+    public BaseRepository(SessionFactory sessionFactory, Class<T> type) {
         this.sessionFactory = sessionFactory;
         this.type = type;
     }

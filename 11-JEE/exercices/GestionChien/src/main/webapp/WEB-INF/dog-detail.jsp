@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Title</title>
-    <%@include file="cssImport.jsp"%>
+    <%@include file="../cssImport.jsp"%>
 </head>
 <body>
 
