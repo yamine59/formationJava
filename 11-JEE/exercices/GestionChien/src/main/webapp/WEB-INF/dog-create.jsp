@@ -19,7 +19,7 @@
                 <h2 class="text-center">Ajouter un chien</h2>
                 <div class="mb-3">
                     <label for="name" class="form-label">Nom :</label>
-                    <input type="text" id="name" class="form-control" name="name" required>
+                    <input type="text" id="name" class="form-control" name="name" required >
                 </div>
                 <div class="mb-3">
                     <label for="breed" class="form-label">Race :</label>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="w-100 d-flex justify-content-end">
 
-                <button type="submit" class="btn  btn-outline-success">Envoyer</button>
+                <button type="submit" class="btn  btn-outline-success gap-2" >Envoyer</button>
                 </div>
             </form>
         </div>

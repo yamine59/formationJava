@@ -34,8 +34,8 @@
                     <input type="date" id="birthdate" name="birthdate" class="form-control" value="<%= dog.getBirthDate() %>">
                 </div>
                 <div class="w-100 d-flex justify-content-between">
-                    <a href="${pageContext.request.contextPath}/dog/list" class="btn btn-outline-success">Retour</a>
-                    <button type="submit" class="btn btn-outline-success">Valider les modifications</button>
+                    <a href="${pageContext.request.contextPath}/dog/list" class="btn btn-outline-success "><i class="bi bi-arrow-left "></i> Retour</a>
+                    <button type="submit" class="btn btn-outline-success"> <i class="bi bi-check-circle"></i> Valider les modifications</button>
 
                 </div>
 
@@ -45,7 +45,7 @@
             <form action="${pageContext.request.contextPath}/dog/delete" method="post">
                 <input type="hidden" name="id" value="<%= dog.getId() %>">
                 <div class="w-100 d-flex justify-content-right mt-5 ">
-                    <button type="submit" class="btn btn-outline-danger text-center">Supprimer le chien</button>
+                    <button type="submit" class="btn btn-outline-danger text-center"><i class="bi bi-trash"></i> Supprimer le chien</button>
                 </div>
             </form>
         </div>

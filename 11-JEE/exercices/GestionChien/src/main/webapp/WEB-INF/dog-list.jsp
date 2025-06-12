@@ -19,13 +19,13 @@
 
     <div class="w-100 d-flex justify-content-between position-sticky">
         <h2 class="text-left">Liste des chiens</h2>
-        <p class="text-center mt-3"><a href="${pageContext.request.contextPath}/dog/create" class="btn btn-outline-success">Ajouter un chien</a></p>
+        <p class="text-center mt-3"><a href="${pageContext.request.contextPath}/dog/create" class="btn btn-outline-success"><i class="bi bi-plus-circle"></i> Ajouter un chien</a></p>
     </div>
     <hr>
     <style>
         ::-webkit-scrollbar {
-            width: 10px;
-            border-radius: 10px;
+            width: 5px;
+            border-radius: 100px;
         }
 
         ::-webkit-scrollbar-track {
@@ -58,7 +58,7 @@
                     <td><%= dog.getBreed() %></td>
                     <td><%= dog.getBirthDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) %></td>
 
-                    <td><a href="${pageContext.request.contextPath}/dog/detail?id=<%= dog.getId() %>" class=" btn btn-outline-success">Détails</a></td>
+                    <td><a href="${pageContext.request.contextPath}/dog/detail?id=<%= dog.getId() %>" class="btn btn-outline-success"><i class="bi bi-eye"></i> Détails</a></td>
                 </tr>
                 <% } %>
             </tbody>

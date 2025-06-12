@@ -32,7 +32,7 @@ public abstract class BaseRepository<T> {
         }
     }
 
-    public boolean delete (int id){
+    public void delete (int id){
         T found = get(id);
         if(found !=null){
             try{
@@ -40,17 +40,14 @@ public abstract class BaseRepository<T> {
                 session.beginTransaction();
                 session.delete(found);
                 session.getTransaction().commit();
-                return true;
             }catch (Exception ex){
                 session.getTransaction().rollback();
-                return false;
             }
             finally {
                 session.close();
             }
         }else{
             System.out.println("Element at id : "+id+" not found");
-            return false;
         }
     }
 
