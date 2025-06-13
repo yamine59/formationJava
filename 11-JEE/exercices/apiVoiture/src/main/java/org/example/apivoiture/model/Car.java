@@ -1,4 +1,4 @@
-package org.example.exapivoiture.model;
+package org.example.apivoiture.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

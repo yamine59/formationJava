@@ -1,10 +1,10 @@
-package org.example.exapivoiture.resourse;
+package org.example.apivoiture.resourse;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import org.example.exapivoiture.model.Car;
-import org.example.exapivoiture.service.CarService;
+import org.example.apivoiture.model.Car;
+import org.example.apivoiture.service.CarService;
 
 import java.util.List;
 

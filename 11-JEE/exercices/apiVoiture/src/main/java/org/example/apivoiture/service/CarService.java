@@ -1,9 +1,8 @@
-package org.example.exapivoiture.service;
+package org.example.apivoiture.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
-import org.example.exapivoiture.model.Car;
+import org.example.apivoiture.model.Car;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
