@@ -1,0 +1,43 @@
+package org.example.exapivoiture.resourse;
+
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import org.example.exapivoiture.model.Car;
+import org.example.exapivoiture.service.CarService;
+
+import java.util.List;
+
+@Path("/car")
+public class CarResource {
+
+    private CarService carService;
+
+    @Inject
+    public CarResource(CarService carService) {
+        this.carService = carService;
+    }
+
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Car> getAllCar(){
+        return carService.carList();
+    }
+
+    @GET
+    @Path("/car/{id}")
+    public Car getCar(@PathParam("id") int id){
+        return carService.getCar(id);
+    }
+
+    @POST
+    @Path("/save")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Car save(Car car){
+        return carService.save(car.getBrand(), car.getYearOfManufacture(), car.getColor());
+    }
+
+
+}
