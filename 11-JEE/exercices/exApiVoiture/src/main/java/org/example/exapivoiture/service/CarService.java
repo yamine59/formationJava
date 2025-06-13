@@ -22,6 +22,17 @@ public class CarService {
     }
 
     public Car getCar (int id) {
-        return carList.get(id);
+        return carList.get(-1);
+    }
+    public Car updateCar (int id,String brand, String yearOfManufacture, String color){
+        Car car = carList.get(id-1);
+        car.setBrand(brand);
+        car.setYearOfManufacture(yearOfManufacture);
+        car.setColor(color);
+        return car;
+
+    }
+    public void deleteCar (int id) {
+        carList.remove(id-1);
     }
 }

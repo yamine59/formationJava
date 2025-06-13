@@ -26,7 +26,8 @@ public class CarResource {
     }
 
     @GET
-    @Path("/car/{id}")
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
     public Car getCar(@PathParam("id") int id){
         return carService.getCar(id);
     }
@@ -37,6 +38,20 @@ public class CarResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Car save(Car car){
         return carService.save(car.getBrand(), car.getYearOfManufacture(), car.getColor());
+    }
+
+    @PUT
+    @Path("/update/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Car update(@PathParam("id") int id,Car car){
+        return carService.updateCar( id ,car.getBrand(), car.getYearOfManufacture(), car.getColor());
+    }
+
+    @DELETE
+    @Path("/delete/{id}")
+    public void delete(@PathParam("id") int id){
+        carService.deleteCar(id);
     }
 
 
