@@ -8,6 +8,8 @@ import org.example.apivoiture.service.CarService;
 
 import java.util.List;
 
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 @Path("/car")
 public class CarResource {
 
@@ -20,30 +22,26 @@ public class CarResource {
 
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public List<Car> getAllCar(){
         return carService.carList();
     }
 
     @GET
     @Path("/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
     public Car getCar(@PathParam("id") int id){
         return carService.getCar(id);
     }
 
     @POST
     @Path("/save")
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+
     public Car save(Car car){
         return carService.save(car.getBrand(), car.getYearOfManufacture(), car.getColor());
     }
 
     @PUT
     @Path("/update/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+
     public Car update(@PathParam("id") int id,Car car){
         return carService.updateCar( id ,car.getBrand(), car.getYearOfManufacture(), car.getColor());
     }
