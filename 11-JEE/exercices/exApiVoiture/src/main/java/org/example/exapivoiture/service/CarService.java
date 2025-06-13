@@ -4,28 +4,31 @@ import jakarta.enterprise.context.ApplicationScoped;
 import org.example.exapivoiture.model.Car;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @ApplicationScoped
 public class CarService {
-    private List<Car> carList = new ArrayList<>();
+    private Map<Integer, Car> carMap = new HashMap<>();
 
     public Car save (String brand, String yearOfManufacture, String color) {
-        int id = carList.size()+1;
+        int id = carMap.size()+1;
         Car car = new Car(id, brand, yearOfManufacture, color);
-        carList.add(car);
+        carMap.put(id, car);
         return car;
     }
 
     public List<Car> carList (){
-       return carList;
+       return carMap.values().stream().toList();
     }
 
     public Car getCar (int id) {
-        return carList.get(-1);
+
+        return carMap.get(id);
     }
     public Car updateCar (int id,String brand, String yearOfManufacture, String color){
-        Car car = carList.get(id-1);
+        Car car = carMap.get(id);
         car.setBrand(brand);
         car.setYearOfManufacture(yearOfManufacture);
         car.setColor(color);
@@ -33,6 +36,6 @@ public class CarService {
 
     }
     public void deleteCar (int id) {
-        carList.remove(id-1);
+        carMap.remove(id);
     }
 }
