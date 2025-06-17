@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:fragment="cssImports">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    </th:block>
+</head>
+<body>
+<h4>TODO - <span th:text="${todo.getName().toUpperCase()}"></span> </h4>
+<div class="todo">
+    <div class="title">
+        <p> <span th:text="${todo.getName()}" ></span></p>
+        <p th:if="${todo.isDone()}">Status : ✓</p>
+        <p th:if="${!todo.isDone()}">Status : x</p>
+    </div>
+    <hr>
+
+    <p><span th:text="${todo.getDescription()}" ></span></p>
+
+</div>
+
+<div class="retour"><a th:href="@{todos}">Retour</a></div>
+
+
+
+</body>
+</html>

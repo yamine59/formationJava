@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:fragment="cssImports">
+        <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+    </th:block>
+</head>
+<body>
+<h1>Home Page</h1>
+<h2> <span th:text="${name}"></span> </h2>
+
+<nav>
+    <a th:href="@{/pageb}">Page B</a>
+</nav>
+<img th:src="@{/images/lapin.jpg}" alt="un jolie lapin">
+
+
+<th:block th:fragment="footer">
+    <footer>
+        <p>Mon jolie Footer</p>
+        <p>A placer sur toutes les pages</p>
+    </footer>
+</th:block>
+</body>
+</html>

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e0eafc);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.vide {
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 20px;
+}
+
+.todo {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+}
+
+
+.retour {
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #ff6b6b;
+    transition: background-color 0.3s;
+}
+.retour:hover {
+    background-color: #ff4b4b;
+}
+
+.todoliste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90vw;
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    margin: 10px 0;
+    border: 0.5px solid #ccc;
+}
+
+.todobotton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f3f5;
+    padding: 15px;
+    border-radius: 10px;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.todobotton:hover {
+    background-color: #dee2e6;
+    transform: scale(1.05);
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

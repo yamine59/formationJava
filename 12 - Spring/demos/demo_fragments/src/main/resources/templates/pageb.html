@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+
+<nav>
+    <a th:href="@{/}">HOME</a>
+</nav>
+
+<main>
+    <img th:src="@{/images/lapin.jpg}" alt="un jolie lapin">
+</main>
+
+<span th:replace="~{home :: footer}"></span>
+</body>
+</html>
