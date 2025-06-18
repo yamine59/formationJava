@@ -24,8 +24,12 @@ public class StudentController {
     }
 
     @GetMapping("/list")
-    public String list(Model model){
+    public String list(@RequestParam (value = "lastname", required = false) String lastname ,Model model){
+        if (lastname != null && !lastname.isEmpty()){
+            model.addAttribute("students",studentService.getStudentByName(lastname));
+        }else {
         model.addAttribute("students",studentService.getAllStudent());
+        }
         return "studentList";
     }
 
@@ -56,11 +60,6 @@ public class StudentController {
         return "studentDetail";
     }
 
-    @GetMapping("/filter")
-    public String filterStudent (@RequestParam (value = "lastname") String lastname , Model model){
-        model.addAttribute("students",studentService.getStudentByName(lastname));
-        return "studentList";
-    }
 
     @GetMapping("/delete/{id}")
     public String delete (@PathVariable("id") UUID id){
