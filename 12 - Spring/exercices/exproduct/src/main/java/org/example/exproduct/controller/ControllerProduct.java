@@ -39,4 +39,11 @@ public class ControllerProduct {
         model.addAttribute("products_filter", productsfilted);
         return "product_filter";
     }
+
+    @GetMapping("/product/category")
+    public String CategoryPage(@RequestParam(value = "category", required = false)String category , Model model){
+        List<Product> productsfilted = productService.getProductByCategory(category);
+        model.addAttribute("products", productsfilted);
+        return "product_list";
+    }
 }

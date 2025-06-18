@@ -3,6 +3,7 @@ package org.example.exproduct.service;
 import org.example.exproduct.model.Product;
 import org.springframework.stereotype.Service;
 
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,11 +47,15 @@ public class ProductService {
         return products.get(id);
     }
 
-    public List<Product> getProductByCategoryAndPrice(String category, double price){
-        List<Product> categoryProduct = products.values().stream().filter(c -> c.getCategory().equals(category)).toList();
-        categoryProduct.forEach(System.out::println);
-        List<Product> filtedProduct = categoryProduct.stream().filter(c -> c.getPrice() <= price).toList();
-        filtedProduct.forEach(System.out::println);
-        return filtedProduct;
+    public List<Product> getProductByCategoryAndPrice(String category, double maxPrice){
+        return products.values().stream()
+                .filter(c -> c.getCategory().equals(category) && c.getPrice() <= maxPrice)
+                .toList();
+    }
+
+    public List<Product> getProductByCategory (String category){
+        return products.values().stream()
+                .filter(p -> p.getCategory().equals(category))
+                .toList();
     }
 }
