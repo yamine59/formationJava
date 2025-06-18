@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <span th:replace="~{accueil :: bootstrapImports}"></span>
-
+    <th:block th:replace="fragments :: bootstrapImports"></th:block>
 </head>
 <body>
-
-<span th:replace="~{accueil :: navbar}"></span>
+<th:block th:replace="fragments :: navbar"></th:block>
 
 
 <div class="container" th:if="${!students.isEmpty()}">
