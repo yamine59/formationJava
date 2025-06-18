@@ -13,7 +13,6 @@ public class StudentController {
 
     private final StudentService studentService;
 
-
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
@@ -25,10 +24,10 @@ public class StudentController {
 
     @GetMapping("/list")
     public String list(@RequestParam (value = "lastname", required = false) String lastname ,Model model){
-        if (lastname != null && !lastname.isEmpty()){
-            model.addAttribute("students",studentService.getStudentByName(lastname));
+        if (lastname == null){
+            model.addAttribute("students",studentService.getAllStudent());
         }else {
-        model.addAttribute("students",studentService.getAllStudent());
+            model.addAttribute("students",studentService.getStudentByName(lastname));
         }
         return "studentList";
     }
@@ -36,6 +35,12 @@ public class StudentController {
     @GetMapping("/register")
     public String formRegister(Model model){
         model.addAttribute("student",new Student());
+        return "studentRegisterOrUpdate";
+    }
+
+    @GetMapping("/update/{id}")
+    public String updateForm (@PathVariable("id") UUID id , Model model){
+        model.addAttribute("student",studentService.getStudentById(id));
         return "studentRegisterOrUpdate";
     }
 
@@ -48,25 +53,16 @@ public class StudentController {
         return "redirect:/list";
     }
 
-    @GetMapping("/update/{id}")
-    public String updateForm (@PathVariable("id") UUID id , Model model){
-        model.addAttribute("student",studentService.getStudentById(id));
-        return "studentRegisterOrUpdate";
-    }
-
     @GetMapping("/details/{id}")
     public String detailStudent (@PathVariable("id") UUID id , Model model){
         model.addAttribute("student",studentService.getStudentById(id));
         return "studentDetail";
     }
 
-
     @GetMapping("/delete/{id}")
     public String delete (@PathVariable("id") UUID id){
         studentService.deleteStudent(id);
         return "redirect:/list";
     }
-
-
 
 }

@@ -30,16 +30,17 @@ public class StudentService implements IStudentService<Student> {
     }
 
     public List<Student> getStudentByName (String lastname){
-        if (lastname.isEmpty()){
+        String name = lastname.toLowerCase();
+        if (name.isEmpty()){
             return students.values().stream().toList();
 
-        } else if (lastname.length() <= 3 ) {
+        } else if (name.length() <= 3 ) {
 
             return students.values().stream().filter(s -> s.getLastname()
-                    .contains(lastname)).toList();
+                    .contains(name)).toList();
         }else {
             return students.values().stream().filter(s -> s.getLastname()
-                    .equals(lastname)).toList();
+                    .equals(name)).toList();
         }
     }
 
