@@ -8,9 +8,9 @@
 <h1>la liste des produits</h1>
 <div>
     <form th:action="@{/product/filter}" method="get">
-        <label for="category">Catégorie:
+        <label for="category">
             <select name="category" id="category">
-                <option value="">Toutes</option>
+                <option value="">categorie</option>
                 <option value="electronic">Électronique</option>
                 <option value="vestments">Vêtements</option>
             </select>
@@ -18,6 +18,7 @@
         <label for="price">Prix max:
             <input name="price" id="price" type="range" value="0" min="0" max="1000">
         </label>
+
         <input type="submit" value="Filtrer">
     </form>
 </div>

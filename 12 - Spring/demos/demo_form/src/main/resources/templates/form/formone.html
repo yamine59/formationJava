@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Mon formulaire Get !!!</h1>
+<a th:href="@{/}"> Home</a>
+
+    <form method="get" th:action="@{/add}">
+        <div>
+            <label for="name">Nom du contact :</label>
+            <input type="text" th:name="name" id="name"/>
+        </div>
+        <div>
+            <label for="age">Age du contact :</label>
+            <input type="number" th:name="age" id="age"/>
+        </div>
+        <div>
+            <label for="phone">Telephone du contact :</label>
+            <input type="text" th:name="phone" id="phone"/>
+        </div>
+        <button>Envoyer</button>
+    </form>
+
+</body>
+</html>

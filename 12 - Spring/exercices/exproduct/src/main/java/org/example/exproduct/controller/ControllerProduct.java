@@ -33,11 +33,11 @@ public class ControllerProduct {
 
     @GetMapping("/product/filter")
     public String filterPage(
-            @RequestParam(value = "category", required = false) String category, 
+            @RequestParam(value = "category", required = false) String category,
             @RequestParam(value = "price", required = false)double price ,
             Model model ) {
-        model.addAttribute("products_filter",productService.getProductByCategoryAndPrice(category,price));
-        return "product_filter";
+        model.addAttribute("products",productService.getProductByCategoryAndPrice(category,price));
+        return "product_list";
     }
 
     @GetMapping("/product/category")
