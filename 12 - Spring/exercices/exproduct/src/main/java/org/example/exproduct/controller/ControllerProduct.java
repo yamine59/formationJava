@@ -21,29 +21,28 @@ public class ControllerProduct {
 
     @GetMapping
     public String homePage(Model model){
-        List<Product> products = productService.getAllProduct();
-        model.addAttribute("products",products);
+        model.addAttribute("products",productService.getAllProduct());
         return "product_list";
     }
 
     @GetMapping("/product/{id}")
     public String detaiPage(@PathVariable("id")UUID id ,Model model){
-        Product product = productService.getProductById(id);
-        model.addAttribute("product",product);
+        model.addAttribute("product",productService.getProductById(id));
         return "product_detail";
     }
 
     @GetMapping("/product/filter")
-    public String filterPage(@RequestParam(value = "category", required = false) String category, @RequestParam(value = "price", required = false)double price , Model model ) {
-        List<Product> productsfilted = productService.getProductByCategoryAndPrice(category,price);
-        model.addAttribute("products_filter", productsfilted);
+    public String filterPage(
+            @RequestParam(value = "category", required = false) String category, 
+            @RequestParam(value = "price", required = false)double price ,
+            Model model ) {
+        model.addAttribute("products_filter",productService.getProductByCategoryAndPrice(category,price));
         return "product_filter";
     }
 
     @GetMapping("/product/category")
     public String CategoryPage(@RequestParam(value = "category", required = false)String category , Model model){
-        List<Product> productsfilted = productService.getProductByCategory(category);
-        model.addAttribute("products", productsfilted);
+        model.addAttribute("products", productService.getProductByCategory(category));
         return "product_list";
     }
 }
