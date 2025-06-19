@@ -35,10 +35,10 @@
                 <div class="mb-3">
                     <label class="form-label">Categorie :</label>
 
-                    <select class="form-select" th:field="*{categorie}">
+                    <select class="form-select" th:field="*{categorie_id}">
                         <option value="">-- Choisir une categorie --</option>
                         <option th:each="categorie : ${categories}"
-                                th:value="${categorie.nom}"
+                                th:value="${categorie.id}"
                                 th:text="${categorie.nom}">
                         </option>
                     </select>

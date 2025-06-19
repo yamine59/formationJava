@@ -17,7 +17,7 @@
         <div class="card-body">
             <p  th:text="${recette.getInstructions()}"></p>
             <p th:text="${recette.getIngredients()}"></p>
-            <p th:text="${recette.getCategorieObj().nom}"></p>
+            <p th:text="${recette.getCategorie().nom.toString()}"></p>
 
         </div>
         <div class="card-footer">

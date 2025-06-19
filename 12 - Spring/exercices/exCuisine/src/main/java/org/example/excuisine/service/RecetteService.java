@@ -36,6 +36,5 @@ public class RecetteService implements IService<Recette> {
     @Override
     public void delete(UUID id) {
         recettes.remove(id);
-
     }
 }
