@@ -34,6 +34,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Categorie :</label>
+
                     <select class="form-select" th:field="*{categorie}">
                         <option value="">-- Choisir une categorie --</option>
                         <option th:each="categorie : ${categories}"
@@ -41,6 +42,7 @@
                                 th:text="${categorie.nom}">
                         </option>
                     </select>
+
                     <div class="d-flex flex-row">
                         <div class="text-danger" th:if="${#fields.hasErrors('categorie')}" th:errors="*{categorie}"></div>
                         <a th:if="${#fields.hasErrors('categorie')}" th:href="@{/categorie/form}"> cliquer ici</a>
