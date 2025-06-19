@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:replace="fragments :: bootstrapImports"></th:block>
+</head>
+<body>
+<th:block th:replace="fragments :: navbar"></th:block>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form method="post" th:action="@{/recette/save}" th:object="${recette} " class="needs-validation" >
+                <input type="hidden" th:field="*{id}">
+
+                <div class="mb-3">
+                    <label for="nom" class="form-label">nom :</label>
+                    <input type="text" class="form-control" id="nom" th:field="*{nom}" >
+                    <div class="text-danger" th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="ingredients" class="form-label">ingredients :</label>
+                    <input type="text" class="form-control" id="ingredients" th:field="*{ingredients}" >
+                    <div class="text-danger" th:if="${#fields.hasErrors('ingredients')}" th:errors="*{ingredients}"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="instructions" class="form-label">Instructions :</label>
+                    <input type="text" class="form-control" id="instructions" th:field="*{instructions}" >
+                    <div class="text-danger" th:if="${#fields.hasErrors('instructions')}" th:errors="*{instructions}"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Categorie :</label>
+                    <select class="form-select" th:field="*{categorie}">
+                        <option value="">-- Choisir une categorie --</option>
+                        <option th:each="categorie : ${categories}"
+                                th:value="${categorie.nom}"
+                                th:text="${categorie.nom}">
+                        </option>
+                    </select>
+                    <div class="d-flex flex-row">
+                        <div class="text-danger" th:if="${#fields.hasErrors('categorie')}" th:errors="*{categorie}"></div>
+                        <a th:if="${#fields.hasErrors('categorie')}" th:href="@{/categorie/form}"> cliquer ici</a>
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

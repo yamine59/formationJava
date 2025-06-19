@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:replace="fragments :: bootstrapImports"></th:block>
+</head>
+<body>
+<th:block th:replace="fragments :: navbar"></th:block>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form method="post" th:action="@{/categorie/save}" th:object="${categorie}" class="needs-validation" >
+                <input type="hidden" th:field="*{id}">
+
+                <div class="mb-3">
+                    <label for="nom" class="form-label">nom :</label>
+                    <input type="text" class="form-control" id="nom" th:field="*{nom}" >
+                    <div class="text-danger" th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">description :</label>
+                    <input type="text" class="form-control" id="description" th:field="*{description}" >
+                    <div class="text-danger" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
