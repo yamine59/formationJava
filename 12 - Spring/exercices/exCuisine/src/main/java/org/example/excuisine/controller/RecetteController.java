@@ -52,7 +52,7 @@ public class RecetteController {
         if (recette.getId() == null){
             recette.setId(UUID.randomUUID());
         }
-
+        recette.setCategorieObj(categorieService.getByNom(recette.getCategorie()));
         System.out.println(recette);
         recetteService.saveOrUpdate(recette);
         return "redirect:/";

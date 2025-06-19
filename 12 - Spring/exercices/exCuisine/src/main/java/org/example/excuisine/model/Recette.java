@@ -25,4 +25,5 @@ public class Recette {
     private String Instructions;
     @NotBlank(message = "la catégorie ne peut pas être vide ou creer une nouvelle catégorie : ")
     private String categorie;
+    private Categorie categorieObj;
 }

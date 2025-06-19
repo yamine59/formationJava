@@ -18,12 +18,15 @@ public class CategorieService implements IService<Categorie>{
     @Override
     public void saveOrUpdate(Categorie categorie) {
         categories.put(categorie.getId(),categorie);
-
     }
 
     @Override
     public Categorie getById(UUID id) {
         return categories.get(id);
+    }
+
+    public Categorie getByNom(String nom) {
+        return categories.values().stream().filter(c -> c.getNom().equals(nom)).findFirst().orElse(null);
     }
 
     @Override
