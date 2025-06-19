@@ -9,7 +9,7 @@
 
 <th:block th:replace="fragments :: navbar"></th:block>
 <div>
-    <div class="d-grid col-6 mx-auto gap-2">
+    <div   class="d-grid mb-5 col-6 mx-auto gap-2">
         <a class="btn btn-primary" th:href="@{/recette/form}">Ajouter une recette</a>
     </div>
     <div class="container" th:if="${!recettes.isEmpty()}">

@@ -34,11 +34,7 @@ public class CategorieController {
         return "categorie/categorieSOU";
     }
 
-    @GetMapping("/categorie/update/{id}")
-    public String pageUpdate(@PathVariable("id")UUID id,Model model ){
-        model.addAttribute("categorie",categorieService.getById(id));
-        return "categorie/categorieSOU";
-    }
+
 
     @PostMapping("/categorie/save")
     public String save(@Valid @ModelAttribute("categorie")Categorie categorie, BindingResult bindingResult){
@@ -52,6 +48,12 @@ public class CategorieController {
         return "redirect:/categorie/list";
     }
 
+    @GetMapping("/categorie/update/{id}")
+    public String pageUpdate(@PathVariable("id")UUID id,Model model ){
+        model.addAttribute("categorie",categorieService.getById(id));
+        return "categorie/categorieSOU";
+    }
+
     @GetMapping("/categorie/detail/{id}")
     public String pageDetail(@PathVariable("id") UUID id,Model model){
         model.addAttribute("categorie",categorieService.getById(id));
@@ -61,7 +63,7 @@ public class CategorieController {
     @GetMapping("/categorie/delete/{id}")
     public String pageDelete(@PathVariable("id") UUID id){
         categorieService.delete(id);
-        return "redirect:/list";
+        return "redirect:/categorie/list";
     }
 
 

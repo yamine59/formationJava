@@ -10,7 +10,7 @@
 <th:block th:replace="fragments :: navbar"></th:block>
 <div>
     <div class="d-grid col-6 mx-auto gap-2">
-        <a class="btn btn-primary" th:href="@{/categorie/form}">Ajouter une categorie</a>
+        <a class="btn btn-primary mb-5" th:href="@{/categorie/form}">Ajouter une categorie</a>
     </div>
     <div class="container" th:if="${!categories.isEmpty()}">
         <table class="table table-striped table-hover table-bordered">

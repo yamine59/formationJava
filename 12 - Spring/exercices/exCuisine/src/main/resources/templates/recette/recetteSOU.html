@@ -20,9 +20,9 @@
                     <div class="text-danger" th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}"></div>
                 </div>
 
-                <div class="mb-3">
+                <div  class="mb-3">
                     <label for="ingredients" class="form-label">ingredients :</label>
-                    <input type="text" class="form-control" id="ingredients" th:field="*{ingredients}" >
+                    <input type="text" class="form-control" id="ingredients" th:field="*{ingredients}">
                     <div class="text-danger" th:if="${#fields.hasErrors('ingredients')}" th:errors="*{ingredients}"></div>
                 </div>
 
