@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:replace="fragments :: bootstrapImports"></th:block>
+</head>
+<body>
+<th:block th:replace="fragments :: navbar"></th:block>
+
+<div class="container w-100 d-flex  justify-content-center align-items-center m-auto" th:if="${recette}">
+    <div class="card text-center w-50">
+        <div class="card-header d-flex flex-row justify-content-center gap-3">
+
+            <h2 th:text="${recette.getNom().substring(0,1).toUpperCase() + recette.getNom().substring(1)}"></h2>
+        </div>
+        <div class="card-body">
+            <div>
+                <p>Les instructions :</p>
+                <p  th:text="${recette.getInstructions()}"></p>
+
+            </div>
+            <div class="">
+                <p>Les ingredients : </p>
+                <span th:each="ingredient , stat : ${recette.getIngredients()}" class="d-flex flex-row justify-content-center  ">
+                    <span th:text="${stat.count}"> </span> -
+                    <span  th:text="${ingredient.toString()}"></span>
+                </span>
+
+            </div>
+            <div>
+                <p>La categorie :</p>
+                <p th:text="${recette.getCategorie().nom.toString()}"></p>
+            </div>
+
+
+        </div>
+        <div class="card-footer">
+            <a th:href="@{/recipe/update/{id}(id=${recette.id})}" class="btn btn-primary">Modifier</a>
+            <a th:href="@{/recipe/delete/{id}(id=${recette.id})}" class="btn btn-danger">Supprimer</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

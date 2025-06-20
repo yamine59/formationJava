@@ -13,7 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Data
 @Builder
-public class Categorie {
+public class Category {
     private UUID id;
     @NotBlank
     @Size(min = 3 , max = 50)

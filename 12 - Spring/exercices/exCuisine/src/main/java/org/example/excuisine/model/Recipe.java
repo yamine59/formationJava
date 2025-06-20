@@ -15,7 +15,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Data
 @Builder
-public class Recette {
+public class Recipe {
     private UUID id;
     @NotBlank
     @Size(min = 3 , max = 50, message = "Le nom de la recette doit avoir entre 3 et 50 caractères")
@@ -25,5 +25,5 @@ public class Recette {
     @NotBlank(message = "les instructions ne peuvent pas être vide")
     private String Instructions;
     private UUID categorie_id;
-    private Categorie categorie;
+    private Category categorie;
 }

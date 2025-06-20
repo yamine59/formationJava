@@ -1,7 +1,6 @@
 package org.example.excuisine.service;
 
-import org.example.excuisine.model.Categorie;
-import org.example.excuisine.model.Recette;
+import org.example.excuisine.model.Recipe;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -10,26 +9,26 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
-public class RecetteService implements IService<Recette> {
+public class RecipeService implements IService<Recipe> {
 
-    private final Map<UUID,Recette> recettes;
+    private final Map<UUID, Recipe> recettes;
 
-    public RecetteService() {
+    public RecipeService() {
         recettes = new HashMap<>();
     }
 
     @Override
-    public void saveOrUpdate(Recette recette) {
+    public void saveOrUpdate(Recipe recette) {
         recettes.put(recette.getId(),recette);
     }
 
     @Override
-    public Recette getById(UUID id) {
+    public Recipe getById(UUID id) {
         return recettes.get(id);
     }
 
     @Override
-    public List<Recette> getAll() {
+    public List<Recipe> getAll() {
         return recettes.values().stream().toList();
     }
 

@@ -1,6 +1,6 @@
 package org.example.excuisine.service;
 
-import org.example.excuisine.model.Categorie;
+import org.example.excuisine.model.Category;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -9,28 +9,28 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
-public class CategorieService implements IService<Categorie>{
-    private final Map<UUID, Categorie> categories;
+public class CategoryService implements IService<Category>{
+    private final Map<UUID, Category> categories;
 
-    public CategorieService() {
+    public CategoryService() {
         categories = new HashMap<>();
     }
     @Override
-    public void saveOrUpdate(Categorie categorie) {
+    public void saveOrUpdate(Category categorie) {
         categories.put(categorie.getId(),categorie);
     }
 
     @Override
-    public Categorie getById(UUID id) {
+    public Category getById(UUID id) {
         return categories.get(id);
     }
 
-    public Categorie getByNom(String nom) {
+    public Category getByNom(String nom) {
         return categories.values().stream().filter(c -> c.getNom().equals(nom)).findFirst().orElse(null);
     }
 
     @Override
-    public List<Categorie> getAll() {
+    public List<Category> getAll() {
         return categories.values().stream().toList();
     }
 

@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form method="post" th:action="@{/recette/save}" th:object="${recette} " class="needs-validation" >
+            <form method="post" th:action="@{/recipe/save}" th:object="${recette} " class="needs-validation" >
                 <input type="hidden" th:field="*{id}">
 
                 <div class="mb-3">
@@ -45,7 +45,7 @@
 
                     <div class="d-flex flex-row">
                         <div class="text-danger" th:if="${#fields.hasErrors('categorie')}" th:errors="*{categorie}"></div>
-                        <a th:if="${#fields.hasErrors('categorie')}" th:href="@{/categorie/form}"> cliquer ici</a>
+                        <a th:if="${#fields.hasErrors('categorie')}" th:href="@{/category/form}"> cliquer ici</a>
                     </div>
 
                 </div>
