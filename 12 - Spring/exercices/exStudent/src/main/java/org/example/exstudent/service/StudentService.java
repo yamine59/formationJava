@@ -1,12 +1,10 @@
 package org.example.exstudent.service;
 
-import org.example.exstudent.dao.StudentRepository;
+import org.example.exstudent.repository.StudentRepository;
 import org.example.exstudent.model.Student;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 @Service

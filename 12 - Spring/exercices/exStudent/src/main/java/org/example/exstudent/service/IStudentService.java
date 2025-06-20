@@ -9,4 +9,5 @@ public interface IStudentService <T>{
     T getStudentById(UUID id);
     List<T> getAllStudent();
     void deleteStudent(UUID id);
+
 }

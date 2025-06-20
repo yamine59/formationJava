@@ -1,4 +1,4 @@
-package org.example.exstudent.dao;
+package org.example.exstudent.repository;
 
 import org.example.exstudent.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
