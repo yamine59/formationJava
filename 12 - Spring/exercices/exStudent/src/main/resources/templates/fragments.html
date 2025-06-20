@@ -41,10 +41,34 @@
 
                     </li>
                 </ul>
-                <form class="d-flex" method="get" th:action="@{/list}">
-                    <input class="form-control me-2" type="text" name="lastname" placeholder="Entrer un nom">
-                    <button class="btn btn-outline-light" type="submit">Rechercher</button>
+                <form class="d-flex" method="get" th:action="@{/list}" id="searchForm">
+                    <input
+                            class="form-control me-2"
+                            type="text"
+                            name="lastname"
+                            placeholder="Rechercher un étudiant"
+                            id="searchInput"
+                            autocomplete="off"
+                    >
                 </form>
+
+                <script>
+                    const input = document.getElementById('searchInput');
+                    const form = document.getElementById('searchForm');
+                    let timeout = null;
+
+                    input.addEventListener('input', () => {
+                        clearTimeout(timeout);
+                        timeout = setTimeout(() => {
+                            form.submit();
+                        }, 1000);
+                    });
+                    window.addEventListener('load', () => {
+                        input.focus();
+                    });
+                </script>
+
+
             </div>
         </div>
     </nav>

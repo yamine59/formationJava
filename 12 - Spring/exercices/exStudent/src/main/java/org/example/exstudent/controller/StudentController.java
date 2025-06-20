@@ -45,13 +45,12 @@ public class StudentController {
     }
 
     @PostMapping("/registerOrUpdate")
-    public String register (@ModelAttribute("student")Student student){
-        if (student.getId() == null){
-            student.setId(UUID.randomUUID());
-        }
+    public String register(@ModelAttribute("student") Student student) {
         studentService.saveOrUpdate(student);
         return "redirect:/list";
     }
+
+
 
     @GetMapping("/details/{id}")
     public String detailStudent (@PathVariable("id") UUID id , Model model){

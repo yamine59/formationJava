@@ -1,5 +1,6 @@
 package org.example.exstudent.service;
 
+import org.example.exstudent.dao.StudentRepository;
 import org.example.exstudent.model.Student;
 import org.springframework.stereotype.Service;
 
@@ -11,41 +12,40 @@ import java.util.UUID;
 @Service
 public class StudentService implements IStudentService<Student> {
 
-    private final Map<UUID , Student> students;
+    private final StudentRepository studentRepository;
 
-    public StudentService() {
-        students = new HashMap<>();
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
     }
 
+
     public void saveOrUpdate(Student student) {
-        students.put(student.getId(), student);
+        studentRepository.save(student);
     }
 
     public Student getStudentById(UUID id){
-        return students.get(id);
+        return studentRepository.findById(id).orElse(null);
     }
 
     public List<Student> getAllStudent() {
-        return students.values().stream().toList();
+        return studentRepository.findAll();
     }
 
-    public List<Student> getStudentByName (String lastname){
-        String name = lastname.toLowerCase();
+    public List<Student> getStudentByName (String search){
+        String name = search.toLowerCase();
         if (name.isEmpty()){
-            return students.values().stream().toList();
+            return studentRepository.findAll();
 
         } else if (name.length() <= 3 ) {
 
-            return students.values().stream().filter(s -> s.getLastname()
-                    .contains(name)).toList();
+            return studentRepository.findByLastnameContainingIgnoreCaseOrFirstnameContainingIgnoreCase(search,search);
         }else {
-            return students.values().stream().filter(s -> s.getLastname()
-                    .equals(name)).toList();
+            return studentRepository.findByLastnameIgnoreCaseOrFirstnameIgnoreCase(search,search);
         }
     }
 
     public void deleteStudent (UUID id){
-        students.remove(id);
+        studentRepository.deleteById(id);
     }
 
 }
