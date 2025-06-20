@@ -13,6 +13,7 @@
         <a class="btn btn-primary" th:href="@{/recette/form}">Ajouter une recette</a>
     </div>
     <div class="container" th:if="${!recettes.isEmpty()}">
+        <h2 class="text-center">Liste des recettes</h2>
         <table class="table table-striped table-hover table-bordered">
             <thead>
             <tr>

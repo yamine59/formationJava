@@ -24,7 +24,6 @@ public class Recette {
     private List<String> ingredients;
     @NotBlank(message = "les instructions ne peuvent pas être vide")
     private String Instructions;
-    @NotBlank(message = "la catégorie ne peut pas être vide ou creer une nouvelle catégorie : ")
-    private String categorie_id;
+    private UUID categorie_id;
     private Categorie categorie;
 }

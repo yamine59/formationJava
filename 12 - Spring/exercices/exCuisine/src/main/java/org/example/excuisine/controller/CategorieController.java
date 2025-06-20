@@ -2,7 +2,6 @@ package org.example.excuisine.controller;
 
 import jakarta.validation.Valid;
 import org.example.excuisine.model.Categorie;
-import org.example.excuisine.model.Recette;
 import org.example.excuisine.service.CategorieService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,7 +28,7 @@ public class CategorieController {
     @GetMapping("/form")
     public String pageAdd(Model model){
         model.addAttribute("categorie",new Categorie());
-        return "categorie/categorieSOU";
+        return "categorieForm";
     }
 
 
@@ -37,7 +36,7 @@ public class CategorieController {
     @PostMapping("/save")
     public String save(@Valid @ModelAttribute("categorie")Categorie categorie, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
-            return "categorie/categorieSOU";
+            return "categorieForm";
         }
         if (categorie.getId() == null){
             categorie.setId(UUID.randomUUID());
@@ -49,7 +48,7 @@ public class CategorieController {
     @GetMapping("/update/{id}")
     public String pageUpdate(@PathVariable("id")UUID id,Model model ){
         model.addAttribute("categorie",categorieService.getById(id));
-        return "categorie/categorieSOU";
+        return "categorieForm";
     }
 
     @GetMapping("/detail/{id}")

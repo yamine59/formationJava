@@ -34,26 +34,26 @@ public class RecetteController {
     public String pageAdd2(Model model){
         model.addAttribute("recette",new Recette());
         model.addAttribute("categories",categorieService.getAll());
-        return "recette/recetteSOU";
+        return "recetteForm";
     }
 
     @GetMapping("/recette/update/{id}")
     public String pageUpdate(@PathVariable("id") UUID id, Model model ){
         model.addAttribute("recette",recetteService.getById(id));
         model.addAttribute("categories",categorieService.getAll());
-        return "recette/recetteSOU";
+        return "recetteForm";
     }
 
     @PostMapping("/recette/save")
     public String save(@Valid @ModelAttribute("recette")Recette recette, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
-            return "recette/recetteSOU";
+            return "recetteForm";
         }
         if (recette.getId() == null){
             recette.setId(UUID.randomUUID());
         }
 
-        recette.setCategorie(categorieService.getById(UUID.fromString(recette.getCategorie_id())));
+        recette.setCategorie(categorieService.getById(recette.getCategorie_id()));
         recetteService.saveOrUpdate(recette);
         return "redirect:/";
     }
