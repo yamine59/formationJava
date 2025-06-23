@@ -7,25 +7,23 @@ import org.example.extodoapi.entity.Todo;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.UUID;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class TodoReceiveDto {
-    private long id;
+
     private String title;
     private String description;
     private String date;
-    private boolean isValidate;
 
     public Todo dtoToEntity(){
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         return Todo.builder()
-                .id(id)
-                .title(title)
-                .description(description)
-                .date(LocalDate.parse(date,dateTimeFormatter))
-                .isValidate(false)
+                .title(getTitle())
+                .description(getDescription())
+                .date(LocalDate.parse(getDate(),dateTimeFormatter))
                 .build();
     }
 }

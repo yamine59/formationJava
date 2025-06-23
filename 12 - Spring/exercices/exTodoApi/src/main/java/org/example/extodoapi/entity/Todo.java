@@ -8,8 +8,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.extodoapi.dto.TodoResponseDto;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
@@ -18,10 +20,20 @@ import java.time.LocalDate;
 @Data
 public class Todo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     private String title;
     private String description;
     private LocalDate date;
     private boolean isValidate;
+
+    public TodoResponseDto entityToDto() {
+        return TodoResponseDto.builder()
+                .id(id)
+                .title(title)
+                .description(description)
+                .date(date)
+                .isValidate(isValidate)
+                .build();
+    }
 }

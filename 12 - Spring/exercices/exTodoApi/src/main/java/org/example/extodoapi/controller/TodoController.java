@@ -1,6 +1,7 @@
 package org.example.extodoapi.controller;
 
 import org.example.extodoapi.dto.TodoReceiveDto;
+import org.example.extodoapi.dto.TodoResponseDto;
 import org.example.extodoapi.entity.Todo;
 import org.example.extodoapi.service.TodoService;
 import org.springframework.http.HttpStatus;
@@ -10,8 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
-@Controller
+@RestController
 @RequestMapping("api/todo")
 public class TodoController {
 
@@ -22,42 +24,39 @@ public class TodoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Todo>> getAll () {
+    public ResponseEntity<List<TodoResponseDto>> getAll () {
         return ResponseEntity.ok(service.get());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Todo> get(@PathVariable long id){
+    public ResponseEntity<TodoResponseDto> get(@PathVariable UUID id){
         return ResponseEntity.ok(service.get(id));
     }
 
-    @GetMapping("/validate")
-    public ResponseEntity<List<Todo>> getValidate(){
-        return ResponseEntity.ok(service.getValidate());
+    @GetMapping("/status/{status}")
+    public ResponseEntity<List<TodoResponseDto>> getByStatus (@PathVariable String status){
+        return ResponseEntity.ok(service.getByStatus(Boolean.parseBoolean(status)));
     }
 
-    @GetMapping("/novalidate")
-    public ResponseEntity<List<Todo>> getNoValidate(){
-        return ResponseEntity.ok(service.getNoValidate());
-    }
+
 
     @GetMapping("/validate/{id}")
-    public ResponseEntity<Todo> toggleValidate(@PathVariable long id){
+    public ResponseEntity<TodoResponseDto> toggleValidate(@PathVariable UUID id){
         return ResponseEntity.ok(service.toggleValidate(id));
     }
 
     @PostMapping
-    public ResponseEntity<Todo> create(@RequestBody TodoReceiveDto todoReceiveDto){
+    public ResponseEntity<TodoResponseDto> create(@RequestBody TodoReceiveDto todoReceiveDto){
         return ResponseEntity.status(HttpStatus.CREATED).body(service.create(todoReceiveDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Todo> update(@PathVariable long id,@RequestBody TodoReceiveDto todoReceiveDto){
+    public ResponseEntity<TodoResponseDto> update(@PathVariable UUID id,@RequestBody TodoReceiveDto todoReceiveDto){
         return ResponseEntity.ok(service.update(id,todoReceiveDto));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete (@PathVariable long id){
+    public ResponseEntity<String> delete (@PathVariable UUID id){
         service.delete(id);
         return ResponseEntity.ok(String.format("User at id: %s is deleted", id));
     }

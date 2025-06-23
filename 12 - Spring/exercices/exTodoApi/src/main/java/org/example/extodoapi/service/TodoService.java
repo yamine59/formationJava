@@ -2,6 +2,7 @@ package org.example.extodoapi.service;
 
 import org.apache.catalina.User;
 import org.example.extodoapi.dto.TodoReceiveDto;
+import org.example.extodoapi.dto.TodoResponseDto;
 import org.example.extodoapi.entity.Todo;
 import org.example.extodoapi.exception.NotFoundException;
 import org.example.extodoapi.repository.TodoRepository;
@@ -11,6 +12,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Formatter;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class TodoService {
@@ -20,45 +22,42 @@ public class TodoService {
         this.todoRepository = todoRepository;
     }
 
-    public Todo create(TodoReceiveDto todoReceiveDto){
-        return todoRepository.save(todoReceiveDto.dtoToEntity());
+    public TodoResponseDto create(TodoReceiveDto todoReceiveDto){
+        return todoRepository.save(todoReceiveDto.dtoToEntity()).entityToDto();
     }
 
-    public Todo get(Long id){
-        return todoRepository.findById(id).orElseThrow(NotFoundException::new);
+    public TodoResponseDto get(UUID id){
+        return todoRepository.findById(id).orElseThrow(NotFoundException::new).entityToDto();
     }
 
-    public List<Todo> get(){
-        return todoRepository.findAll();
+    public List<TodoResponseDto> get(){
+        return todoRepository.findAll().stream().map(Todo::entityToDto).toList();
     }
 
-    public Todo update(long id ,TodoReceiveDto todoReceiveDto){
-        Todo todoUpdate = get(id);
+    public TodoResponseDto update(UUID id ,TodoReceiveDto todoReceiveDto){
+        Todo todoUpdate = todoRepository.findById(id).orElseThrow(NotFoundException::new);
         Todo todoGet = todoReceiveDto.dtoToEntity();
         todoUpdate.setTitle(todoGet.getTitle());
         todoUpdate.setDescription(todoGet.getDescription());
         todoUpdate.setDate(todoGet.getDate());
         todoUpdate.setValidate(todoGet.isValidate());
-        return todoRepository.save(todoUpdate);
+        return todoRepository.save(todoUpdate).entityToDto();
 
     }
 
-    public Todo toggleValidate(long id){
-        Todo todo = get(id);
+    public TodoResponseDto toggleValidate(UUID id){
+        Todo todo = todoRepository.findById(id).orElseThrow(NotFoundException::new);
         todo.setValidate(!todo.isValidate());
         todoRepository.save(todo);
-        return todo;
+        return todo.entityToDto();
     }
 
-    public List<Todo> getValidate(){
-        return todoRepository.findAll().stream().filter(todo -> todo.isValidate()).toList();
+    public List<TodoResponseDto> getByStatus (boolean status){
+        return todoRepository.getTodoByValidate(status).stream().map(Todo::entityToDto).toList();
     }
 
-    public List<Todo> getNoValidate(){
-        return todoRepository.findAll().stream().filter(todo -> !todo.isValidate()).toList();
-    }
 
-    public void delete(long id){
+    public void delete(UUID id){
         todoRepository.deleteById(id);
     }
 }
