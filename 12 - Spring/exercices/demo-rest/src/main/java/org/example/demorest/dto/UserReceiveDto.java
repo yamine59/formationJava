@@ -1,5 +1,7 @@
 package org.example.demorest.dto;
 
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,10 +15,13 @@ import java.time.format.DateTimeFormatter;
 @AllArgsConstructor
 @Data
 public class UserReceiveDto {
-    private String name;
-    private String birthdateStr;
-    private String password;
 
+    @Size(min = 3,max = 25)
+    private String name;
+    @Pattern(regexp = "[0-9]{2}[-|\\/]{1}[0-9]{2}[-|\\/]{1}[0-9]{4}")
+    private String birthdateStr;
+    @Size(min = 3)
+    private String password;
 
     public User dtoToEntity() {
 

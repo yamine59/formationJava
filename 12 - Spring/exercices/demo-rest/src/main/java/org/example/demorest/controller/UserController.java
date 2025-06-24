@@ -1,5 +1,6 @@
 package org.example.demorest.controller;
 
+import jakarta.validation.Valid;
 import org.example.demorest.dto.UserReceiveDto;
 import org.example.demorest.dto.UserResponseDto;
 import org.example.demorest.entity.User;
@@ -32,7 +33,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserResponseDto> create(@RequestBody UserReceiveDto userReceiveDto){
+    public ResponseEntity<UserResponseDto> create(@Valid @RequestBody UserReceiveDto userReceiveDto){
         return ResponseEntity.status(HttpStatus.CREATED).body(service.create(userReceiveDto));
     }
 
