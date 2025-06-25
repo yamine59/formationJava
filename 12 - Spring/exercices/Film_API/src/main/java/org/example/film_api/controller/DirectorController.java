@@ -26,7 +26,7 @@ public class DirectorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DirectorResponseDto> get(long id) {
+    public ResponseEntity<DirectorResponseDto> get(@PathVariable long id) {
         return ResponseEntity.ok(service.get(id));
     }
 
