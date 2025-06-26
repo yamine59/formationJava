@@ -20,10 +20,10 @@ public class ProductSessionController {
     public ProductSessionController(ProductSessionService service) {
         this.service = service;
     }
-    
+
     @GetMapping("/cart/{productId}")
-    public ResponseEntity<String> addToCart(@PathVariable Long productId) {
-        service.addToCart(productId);
+    public ResponseEntity<String> addToCart(@PathVariable Long productId,@RequestParam(defaultValue = "1") int quantity) {
+        service.addToCart(productId, quantity);
         return ResponseEntity.ok("Product added to cart");
     }
 

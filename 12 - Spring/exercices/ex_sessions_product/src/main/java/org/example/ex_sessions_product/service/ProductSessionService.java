@@ -3,69 +3,113 @@ package org.example.ex_sessions_product.service;
 import jakarta.servlet.http.HttpSession;
 import org.example.ex_sessions_product.dto.ProductReceiveDto;
 import org.example.ex_sessions_product.dto.ProductResponseDto;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class ProductSessionService {
 
-    private ProductService service;
-
-    private HttpSession httpSession;
+    private final ProductService service;
+    private final HttpSession httpSession;
 
     public ProductSessionService(ProductService service, HttpSession httpSession) {
         this.service = service;
         this.httpSession = httpSession;
     }
 
-    public void addToCart (Long productId) {
-        List<Long> cart = (List<Long>) httpSession.getAttribute("cart");
-        if (cart == null) {
-            cart = new ArrayList<>();
+    public void addToCart(Long productId, int quantity) {
+        Map<Long, Integer> cart = getCartMap();
+
+        ProductResponseDto product = service.get(productId);
+        if (product.getQuantity() < quantity) {
+            throw new IllegalArgumentException("Not enough quantity in stock");
         }
+        product.setQuantity(product.getQuantity() - quantity);
+        service.create(toReceiveDto(product));
 
-        cart.add(service.get(productId).getId());
+        cart.put(productId, cart.getOrDefault(productId, 0) + quantity);
         httpSession.setAttribute("cart", cart);
     }
 
-    public void deleteToCart (Long productId) {
-        List<Long> cart = (List<Long>) httpSession.getAttribute("cart");
-        cart.remove(service.get(productId).getId());
-        httpSession.setAttribute("cart", cart);
+    public void deleteToCart(Long productId) {
+        Map<Long, Integer> cart = getCartMap();
+
+        if (cart.containsKey(productId)) {
+            int quantityInCart = cart.get(productId);
+
+            ProductResponseDto product = service.get(productId);
+            product.setQuantity(product.getQuantity() + quantityInCart);
+            service.create(toReceiveDto(product));
+
+            cart.remove(productId);
+            httpSession.setAttribute("cart", cart);
+        }
     }
 
-    public List<String> totalPrice () {
-        List<Long> cart = (List<Long>) httpSession.getAttribute("cart");
+    public List<String> totalPrice() {
+        Map<Long, Integer> cart = getCartMap();
         double totalPrice = 0;
-        List<String> Listproduct = new ArrayList<>();
-        if (cart != null) {
-            for (Long id : cart) {
-                Listproduct.add("Product name is : "+service.get(id).getName() + ", price is : "+service.get(id).getPrice());
-            }
+        List<String> productSummaries = new ArrayList<>();
+
+        if (cart.isEmpty()) {
+            productSummaries.add("Cart is empty.");
+            return productSummaries;
         }
-        if (cart != null) {
-            for (Long id : cart) {
-                totalPrice+= service.get(id).getPrice();
-            }
+
+        for (Map.Entry<Long, Integer> entry : cart.entrySet()) {
+            ProductResponseDto product = service.get(entry.getKey());
+            int quantity = entry.getValue();
+            double price = product.getPrice();
+            double lineTotal = price * quantity;
+
+            productSummaries.add(String.format(
+                    "Product name: %s, unit price: %.2f, quantity: %d, total: %.2f",
+                    product.getName(), price, quantity, lineTotal
+            ));
+
+            totalPrice += lineTotal;
         }
-        Listproduct.add("totalPrice is : "+totalPrice);
-        httpSession.setAttribute("cart", cart);
-        return Listproduct;
+
+        productSummaries.add("Total cart price: " + totalPrice);
+        return productSummaries;
     }
 
-    public List<ProductResponseDto> getCart () {
-        List<Long> cart = (List<Long>) httpSession.getAttribute("cart");
-        List<ProductResponseDto> productResponseDtos = new ArrayList<>();
-        if (cart != null) {
-            for (Long id : cart) {
-                productResponseDtos.add(service.get(id));
-            }
-        }else {
-            return new ArrayList<>();
+    public List<ProductResponseDto> getCart() {
+        Map<Long, Integer> cart = getCartMap();
+        List<ProductResponseDto> result = new ArrayList<>();
+
+        for (Map.Entry<Long, Integer> entry : cart.entrySet()) {
+            ProductResponseDto product = service.get(entry.getKey());
+
+            result.add(ProductResponseDto.builder()
+                    .id(product.getId())
+                    .name(product.getName())
+                    .price(product.getPrice())
+                    .quantity(entry.getValue()) // quantité du panier
+                    .build());
         }
-        return productResponseDtos;
+
+        return result;
+    }
+
+    // Méthode utilitaire : conversion vers ProductReceiveDto
+    private ProductReceiveDto toReceiveDto(ProductResponseDto dto) {
+        ProductReceiveDto receiveDto = new ProductReceiveDto();
+        receiveDto.setId(dto.getId());
+        receiveDto.setName(dto.getName());
+        receiveDto.setPrice(dto.getPrice());
+        receiveDto.setQuantity(dto.getQuantity());
+        return receiveDto;
+    }
+
+    // Méthode utilitaire : récupération du panier ou création si null
+    private Map<Long, Integer> getCartMap() {
+        Map<Long, Integer> cart = (Map<Long, Integer>) httpSession.getAttribute("cart");
+        if (cart == null) {
+            cart = new HashMap<>();
+            httpSession.setAttribute("cart", cart);
+        }
+        return cart;
     }
 }

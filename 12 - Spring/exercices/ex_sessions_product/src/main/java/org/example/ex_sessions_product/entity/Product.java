@@ -20,12 +20,14 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private int quantity;
     private double price;
 
     public ProductResponseDto entityToDto() {
         return ProductResponseDto.builder()
                 .id(id)
                 .name(name)
+                .quantity(quantity)
                 .price(price)
                 .build();
     }
