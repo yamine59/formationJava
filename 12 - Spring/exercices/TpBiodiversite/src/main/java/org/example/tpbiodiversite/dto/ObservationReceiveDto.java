@@ -1,7 +1,5 @@
 package org.example.tpbiodiversite.dto;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import org.example.tpbiodiversite.entity.Observation;
 import org.example.tpbiodiversite.entity.Specie;

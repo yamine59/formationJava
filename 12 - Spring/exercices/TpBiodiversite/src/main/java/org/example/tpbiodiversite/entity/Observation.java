@@ -6,10 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.tpbiodiversite.dto.ObservationResponseDto;
-import org.example.tpbiodiversite.dto.TravelResponseDto;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @AllArgsConstructor

@@ -7,9 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.tpbiodiversite.ENUM.TravelMode;
 import org.example.tpbiodiversite.dto.TravelResponseDto;
-import org.example.tpbiodiversite.dto.TravelResponseTotalDto;
-
-import java.util.List;
 
 @Entity
 @AllArgsConstructor

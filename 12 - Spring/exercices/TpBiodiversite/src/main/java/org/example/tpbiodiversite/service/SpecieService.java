@@ -6,7 +6,6 @@ import org.example.tpbiodiversite.entity.Specie;
 import org.example.tpbiodiversite.execption.NotFoundException;
 import org.example.tpbiodiversite.repository.SpecieRepo;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
