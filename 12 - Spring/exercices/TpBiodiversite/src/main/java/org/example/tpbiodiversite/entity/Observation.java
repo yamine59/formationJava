@@ -6,8 +6,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.tpbiodiversite.dto.ObservationResponseDto;
+import org.example.tpbiodiversite.dto.TravelResponseDto;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -18,9 +20,11 @@ public class Observation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long observation_id;
+
     @ManyToOne
     @JoinColumn(name = "specie_id")
     private Specie specie;
+
     private String observerName;
     private String location;
     private double latitude;
@@ -28,10 +32,7 @@ public class Observation {
     private LocalDate observationDate;
     private String comment;
 
-
-
-
-    public ObservationResponseDto entityToDto (){
+    public ObservationResponseDto entityToDto () {
         return ObservationResponseDto.builder()
                 .observation_id(observation_id)
                 .specie(specie.getCommonName() + " " + specie.getScientificName())

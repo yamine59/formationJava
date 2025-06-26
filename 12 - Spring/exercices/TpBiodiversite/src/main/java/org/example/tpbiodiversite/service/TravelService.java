@@ -85,9 +85,7 @@ public class TravelService {
        Observation observation = observationRepo.findByObserverName(observerName);
        List<TravelLog> findByObservation = travelRepo.findByObservation(observation);
        return findByObservation.stream().map(TravelLog::entityToDto).toList();
-
     }
-
 
     public void delete(long id) {
         travelRepo.deleteById(id);

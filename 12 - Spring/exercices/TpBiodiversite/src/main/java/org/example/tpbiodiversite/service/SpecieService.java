@@ -15,7 +15,6 @@ public class SpecieService {
 
     private final SpecieRepo specieRepo;
 
-
     public SpecieService(SpecieRepo specieRepo) {
         this.specieRepo = specieRepo;
     }

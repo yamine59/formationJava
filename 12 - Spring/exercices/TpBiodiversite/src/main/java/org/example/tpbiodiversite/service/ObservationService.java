@@ -21,13 +21,12 @@ public class ObservationService {
         this.specieRepo = specieRepo;
     }
 
-
     public ObservationResponseDto save(ObservationReceiveDto observation) {
         Specie specie = specieRepo.findById(observation.getSpecie_id()).orElseThrow(NotFoundException::new);
         return observationRepo.save(observation.dtoToEntity(specie)).entityToDto();
     }
 
-    public ObservationResponseDto update (long id, ObservationReceiveDto observationReceiveDto) {
+    public ObservationResponseDto update(long id, ObservationReceiveDto observationReceiveDto) {
         Observation ObToUpdate = observationRepo.findById(id).orElse(null);
         Specie specie = specieRepo.findById(observationReceiveDto.getSpecie_id()).orElseThrow(NotFoundException::new);
 
@@ -45,18 +44,11 @@ public class ObservationService {
     }
 
     public void delete(long id) {
-        Observation movieToUpdate = observationRepo.findById(id).orElse(null);
-        if (movieToUpdate != null) {
-            observationRepo.deleteById(id);
-        }
+       observationRepo.deleteById(id);
     }
 
     public ObservationResponseDto findById(long id) {
-        Observation movieToUpdate = observationRepo.findById(id).orElse(null);
-        if (movieToUpdate != null) {
-            return movieToUpdate.entityToDto();
-        }
-        return null;
+        return observationRepo.findById(id).orElseThrow(NotFoundException::new).entityToDto();
     }
 
     public List<ObservationResponseDto> findAll() {
@@ -64,7 +56,7 @@ public class ObservationService {
     }
 
     public List<ObservationResponseDto> findBySpecieId(long id) {
-         Specie specie = specieRepo.findById(id).orElseThrow(NotFoundException::new);
+        Specie specie = specieRepo.findById(id).orElseThrow(NotFoundException::new);
         return observationRepo.findBySpecie(specie).stream().map(Observation::entityToDto).toList();
     }
 

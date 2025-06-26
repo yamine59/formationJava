@@ -12,9 +12,7 @@ import java.time.format.DateTimeFormatter;
 @Data
 public class ObservationReceiveDto {
     private Long observation_id;
-
     private long specie_id;
-
     private String observerName;
     private String location;
     private double latitude;

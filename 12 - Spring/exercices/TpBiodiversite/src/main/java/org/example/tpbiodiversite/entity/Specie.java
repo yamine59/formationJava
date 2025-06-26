@@ -24,7 +24,6 @@ public class Specie {
     private String scientificName;
     private Category category;
 
-
     public SpecieResponseDto entityToDto (){
         return SpecieResponseDto.builder()
                 .specie_id(specie_id)

@@ -7,7 +7,6 @@ import org.example.tpbiodiversite.dto.TravelResponsesStatDto;
 import org.example.tpbiodiversite.service.TravelService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,6 +28,11 @@ public class TravelController {
     @PostMapping
     public ResponseEntity<TravelResponseDto> save (@RequestBody TravelReceiveDto travelReceiveDto){
         return ResponseEntity.status(HttpStatus.CREATED).body(service.save(travelReceiveDto));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<TravelResponseDto> findById (@PathVariable long id){
+        return ResponseEntity.ok(service.findById(id));
     }
 
     @GetMapping("/stats/{id_observation}")
