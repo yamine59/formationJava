@@ -9,7 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.tpbiodiversite.ENUM.Category;
-import org.example.tpbiodiversite.dto.SpecieResponseDto;
+import org.example.tpbiodiversite.dto.specie.SpecieResponseDto;
 
 @Entity
 @NoArgsConstructor

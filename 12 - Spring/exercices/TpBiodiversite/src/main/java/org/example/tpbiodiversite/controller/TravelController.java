@@ -1,9 +1,9 @@
 package org.example.tpbiodiversite.controller;
 
-import org.example.tpbiodiversite.dto.TravelReceiveDto;
-import org.example.tpbiodiversite.dto.TravelResponseDto;
-import org.example.tpbiodiversite.dto.TravelResponseTotalDto;
-import org.example.tpbiodiversite.dto.TravelResponsesStatDto;
+import org.example.tpbiodiversite.dto.travellog.TravelReceiveDto;
+import org.example.tpbiodiversite.dto.travellog.TravelResponseDto;
+import org.example.tpbiodiversite.dto.travellog.TravelResponseTotalDto;
+import org.example.tpbiodiversite.dto.travellog.TravelResponsesStatDto;
 import org.example.tpbiodiversite.service.TravelService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

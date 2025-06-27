@@ -1,7 +1,8 @@
-package org.example.tpbiodiversite.dto;
+package org.example.tpbiodiversite.dto.travellog;
 
 import lombok.Builder;
 import lombok.Data;
+
 import java.util.List;
 
 @Builder

@@ -15,7 +15,7 @@ public class GeneralExceptionHandler {
 
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<String> notFoundExceptionHandler(NotFoundException ex) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Entity not found");
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Entity not found : "+ex.getMessage());
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

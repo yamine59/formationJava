@@ -1,6 +1,9 @@
 package org.example.tpbiodiversite.service;
 
-import org.example.tpbiodiversite.dto.*;
+import org.example.tpbiodiversite.dto.travellog.TravelReceiveDto;
+import org.example.tpbiodiversite.dto.travellog.TravelResponseDto;
+import org.example.tpbiodiversite.dto.travellog.TravelResponseTotalDto;
+import org.example.tpbiodiversite.dto.travellog.TravelResponsesStatDto;
 import org.example.tpbiodiversite.entity.Observation;
 import org.example.tpbiodiversite.entity.TravelLog;
 import org.example.tpbiodiversite.execption.NotFoundException;
@@ -93,20 +96,11 @@ public class TravelService {
     public TravelLog CalculateCo2(TravelLog travelLog) {
         double distanceKm = travelLog.getDistanceKm();
         switch (travelLog.getMode()) {
-            case CAR:
-                travelLog.setEstimatedCo2Kg(distanceKm * 0.22);
-                break;
-            case BUS:
-                travelLog.setEstimatedCo2Kg(distanceKm * 0.11);
-                break;
-            case TRAIN:
-                travelLog.setEstimatedCo2Kg(distanceKm * 0.03);
-                break;
-            case PLANE:
-                travelLog.setEstimatedCo2Kg(distanceKm * 0.259);
-                break;
-            default:
-                travelLog.setEstimatedCo2Kg(0.0);
+            case CAR -> travelLog.setEstimatedCo2Kg(distanceKm * 0.22);
+            case BUS -> travelLog.setEstimatedCo2Kg(distanceKm * 0.11);
+            case TRAIN -> travelLog.setEstimatedCo2Kg(distanceKm * 0.03);
+            case PLANE -> travelLog.setEstimatedCo2Kg(distanceKm * 0.259);
+            default -> travelLog.setEstimatedCo2Kg(0.0);
         }
         travelLog.setEstimatedCo2Kg(Math.round(travelLog.getEstimatedCo2Kg() * 100.0) / 100.0);
         return travelLog;

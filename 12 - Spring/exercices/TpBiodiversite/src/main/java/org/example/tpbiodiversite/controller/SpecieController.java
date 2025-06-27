@@ -1,7 +1,7 @@
 package org.example.tpbiodiversite.controller;
 
-import org.example.tpbiodiversite.dto.SpecieReceiveDto;
-import org.example.tpbiodiversite.dto.SpecieResponseDto;
+import org.example.tpbiodiversite.dto.specie.SpecieReceiveDto;
+import org.example.tpbiodiversite.dto.specie.SpecieResponseDto;
 import org.example.tpbiodiversite.service.SpecieService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

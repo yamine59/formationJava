@@ -1,4 +1,4 @@
-package org.example.tpbiodiversite.dto;
+package org.example.tpbiodiversite.dto.specie;
 
 import lombok.Builder;
 import lombok.Data;

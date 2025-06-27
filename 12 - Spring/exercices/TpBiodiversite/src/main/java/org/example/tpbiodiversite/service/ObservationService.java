@@ -1,7 +1,7 @@
 package org.example.tpbiodiversite.service;
 
-import org.example.tpbiodiversite.dto.ObservationReceiveDto;
-import org.example.tpbiodiversite.dto.ObservationResponseDto;
+import org.example.tpbiodiversite.dto.observation.ObservationReceiveDto;
+import org.example.tpbiodiversite.dto.observation.ObservationResponseDto;
 import org.example.tpbiodiversite.entity.Observation;
 import org.example.tpbiodiversite.entity.Specie;
 import org.example.tpbiodiversite.execption.NotFoundException;

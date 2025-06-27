@@ -1,7 +1,7 @@
 package org.example.tpbiodiversite.service;
 
-import org.example.tpbiodiversite.dto.SpecieReceiveDto;
-import org.example.tpbiodiversite.dto.SpecieResponseDto;
+import org.example.tpbiodiversite.dto.specie.SpecieReceiveDto;
+import org.example.tpbiodiversite.dto.specie.SpecieResponseDto;
 import org.example.tpbiodiversite.entity.Specie;
 import org.example.tpbiodiversite.execption.NotFoundException;
 import org.example.tpbiodiversite.repository.SpecieRepo;
