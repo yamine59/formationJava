@@ -1,5 +1,6 @@
 package org.example.demo1;
 
+import org.example.exception.DivisionByZeroException;
 import org.junit.Assert;
 import org.junit.Test;
 
