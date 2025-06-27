@@ -8,35 +8,44 @@ public class GradingCalculatorTest {
     @Test
     public void when_Score_95_Presence_90_Then_note_A (){
         GradingCalculator GradingCalculator = new GradingCalculator(95,90);
-        char note = GradingCalculator.getGrade();
-        Assert.assertEquals('A',note);
+        char grade = GradingCalculator.getGrade();
+        Assert.assertEquals('A',grade);
     }
     @Test
     public void when_Score_85_Presence_90_Then_note_B (){
         GradingCalculator GradingCalculator = new GradingCalculator(85,90);
-        char note = GradingCalculator.getGrade();
-        Assert.assertEquals('B',note);
+        char grade = GradingCalculator.getGrade();
+        Assert.assertEquals('B',grade);
     }
     @Test
     public void when_Score_65_Presence_90_Then_note_C (){
         GradingCalculator GradingCalculator = new GradingCalculator(65,90);
-        char note = GradingCalculator.getGrade();
-        Assert.assertEquals('C',note);
+        char grade = GradingCalculator.getGrade();
+        Assert.assertEquals('C',grade);
     }
     @Test
     public void when_Score_95_Presence_65_Then_note_B (){
-        Assert.assertEquals('B',new GradingCalculator(95,65).getGrade());
+
+        GradingCalculator GradingCalculator = new GradingCalculator(95,65);
+        char grade = GradingCalculator.getGrade();
+        Assert.assertEquals('B',grade);
     }
     @Test
     public void when_Score_95_Presence_55_Then_note_F (){
-        Assert.assertEquals('F',new GradingCalculator(95,55).getGrade());
+        GradingCalculator GradingCalculator = new GradingCalculator(95,55);
+        char grade = GradingCalculator.getGrade();
+        Assert.assertEquals('F',grade);
     }
     @Test
     public void when_Score_65_Presence_55_Then_note_F (){
-        Assert.assertEquals('F',new GradingCalculator(65,55).getGrade());
+        GradingCalculator GradingCalculator = new GradingCalculator(65,55);
+        char grade = GradingCalculator.getGrade();
+        Assert.assertEquals('F',grade);
     }
     @Test
     public void when_Score_50_Presence_90_Then_note_F (){
-        Assert.assertEquals('F',new GradingCalculator(50,90).getGrade());
+        GradingCalculator GradingCalculator = new GradingCalculator(50,90);
+        char grade = GradingCalculator.getGrade();
+        Assert.assertEquals('F',grade);
     }
 }
