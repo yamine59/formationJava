@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Objects;
 
 public class CitySearch {
+    private List<String> city;
     public CitySearch(List<String> city) {
         this.city = city;
     }
 
-    private List<String> city;
     public List<String> search(String search)  {
         if (Objects.equals(search, "*")){
             return city.stream().map(s -> s.substring(0, 1).toUpperCase() + s.substring(1)).toList();
