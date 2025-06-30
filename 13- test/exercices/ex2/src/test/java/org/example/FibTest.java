@@ -10,11 +10,11 @@ import java.util.List;
 public class FibTest {
     public Fib fib;
     @Test
-    public void whenRangeIs_1_Then_Is_Not_Null() {
+    public void whenRangeIs_1_Then_IsNotEmpty() {
         fib = new Fib(1);
         List<Integer> result= fib.getFibSeries();
 
-        Assert.assertNotNull(result);
+        Assert.assertFalse(result.isEmpty());
 
     }
 
@@ -34,25 +34,14 @@ public class FibTest {
         List<Integer> result= fib.getFibSeries();
 
         Assert.assertTrue(result.contains(3));
-
-//        Assert.assertTrue(result.contains(3));
-//        Assert.assertEquals(6, result.size());
-//        Assert.assertFalse(result.contains(4));
     }
 
     @Test
     public void whenRange_6_thenResultContain_6_elements(){
         fib = new Fib(6);
-        List<Integer> expected = new ArrayList<>();
         List<Integer> result= fib.getFibSeries();
 
-        expected.add(0);
-        expected.add(0);
-        expected.add(0);
-        expected.add(0);
-        expected.add(0);
-        expected.add(0);
-        Assert.assertEquals(expected.size(),result.size());
+        Assert.assertEquals(6,result.size());
     }
 
     @Test
@@ -66,15 +55,9 @@ public class FibTest {
     @Test
     public void whenRange_6_thenResultContain_0_To_5(){
         fib = new Fib(6);
-        List<Integer> expected = new ArrayList<>();
+        List<Integer> expected = List.of(0,1,1,2,3,5);
         List<Integer> result= fib.getFibSeries();
 
-        expected.add(0);
-        expected.add(1);
-        expected.add(1);
-        expected.add(2);
-        expected.add(3);
-        expected.add(5);
         Assert.assertEquals(expected,result);
     }
 
@@ -83,10 +66,11 @@ public class FibTest {
         fib = new Fib(6);
         List<Integer> result= fib.getFibSeries();
 
-        for (int i = 0; i < result.size() - 1; i++) {
+        List<Integer> expected = new ArrayList<>(result);
+        expected.sort(null);
 
-            Assert.assertTrue(result.get(i)<= result.get(i + 1));
-        }
+        Assert.assertEquals(expected,result);
+//        Assert.assertEquals(result.stream().sorted().toList(),result);
 
     }
 }

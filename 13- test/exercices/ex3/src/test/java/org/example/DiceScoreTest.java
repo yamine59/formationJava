@@ -12,11 +12,29 @@ public class DiceScoreTest {
     public Ide de = Mockito.mock(Ide.class);
 
     @Test
-    public void whenDeIsEquals_ThenResultISMultiplier(){
-        diceScore = new DiceScore();
+    public void whenDeIsEquals_Value5_ThenResultIS20(){
+        diceScore = new DiceScore(de);
         Mockito.when(de.getRoll()).thenReturn(5);
         int result = diceScore.getScore();
 
         Assert.assertEquals(20,result);
+    }
+
+    @Test
+    public void whenDiceIsEquals_6_ThenResultIS30(){
+        diceScore = new DiceScore(de);
+        Mockito.when(de.getRoll()).thenReturn(6);
+        int result = diceScore.getScore();
+
+        Assert.assertEquals(30,result);
+    }
+
+    @Test
+    public void whenDicesIsRandom_10_5_ThenResultIs10(){
+        diceScore = new DiceScore(de);
+        Mockito.when(de.getRoll()).thenReturn(10,5);
+        int result = diceScore.getScore();
+
+        Assert.assertEquals(10,result);
     }
 }

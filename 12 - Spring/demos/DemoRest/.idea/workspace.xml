@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbe4f75a-a7c7-48a0-b585-9fc7b59a1f6c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../1-m2i-20250414-prf-java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../1-m2i-20250414-prf-java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../13- test/exercices/ex3/src/main/java/org/example/DiceScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../13- test/exercices/ex3/src/main/java/org/example/DiceScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../13- test/exercices/ex3/src/test/java/org/example/DiceScoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../13- test/exercices/ex3/src/test/java/org/example/DiceScoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2-git/demo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2-git/demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5-java/exercices_base" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5-java/exercices_base" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2yzRUDuZWt7ILKrukVdPMmT1VqS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.DemoRestApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="DemoRestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="DemoRest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.demorest.DemoRestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbe4f75a-a7c7-48a0-b585-9fc7b59a1f6c" name="Changes" comment="" />
+      <created>1750835428398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750835428398</updated>
+      <workItem from="1750835429527" duration="1003000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
