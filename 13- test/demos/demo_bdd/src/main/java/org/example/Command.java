@@ -7,11 +7,8 @@ public class Command {
 
     private String from;
     private String to;
-        private List<Product> products = new ArrayList<>();
+    public List<String> products = new ArrayList<>();
 
-    public void addProduct(Product product){
-        products.add(product);
-    }
 
     public String getFrom() {
         return from;
@@ -29,11 +26,11 @@ public class Command {
         this.to = to;
     }
 
-    public List<Product> getProducts() {
+    public List<String> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<String> products) {
         this.products = products;
     }
 }

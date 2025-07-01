@@ -9,7 +9,6 @@ import org.junit.Assert;
 public class CommandSteps {
 
     private Command command;
-    private Product product;
 
     @Given("Customer {string} who want to command for someone")
     public void customerWhoWantToCommandForSomeone (String name) {
@@ -32,13 +31,23 @@ public class CommandSteps {
         Assert.assertEquals(name,command.getFrom());
     }
 
-    @Then("there is add 2 product and there is 2 product in the command")
-    public void thereIsAdd2ProductAndThereIs2ProductInTheCommand () {
-        Product product1 = new Product("name");
-        Product product2 = new Product("name2");
-        command.addProduct(product1);
-        command.addProduct(product2);
+    @And("customer add {int} product in the command")
+    public void customerAddProductInTheCommand (int number) {
+        for (int i = 0; i < number; i++) {
 
-        Assert.assertEquals(2,command.getProducts().size());
+            command.getProducts().add("product"+ i);
+        }
+    }
+    @Then("there are {int} product in the command")
+    public void thereAreAdd2ProductAndThereIs2ProductInTheCommand (int number) {
+
+        Assert.assertEquals(number,command.getProducts().size());
+    }
+
+    @And("customer remove {int} product in the command")
+    public void customerRemoveProductInTheCommand (int number) {
+        for (int i = 0; i < number; i++) {
+            command.getProducts().remove(0);
+        }
     }
 }
