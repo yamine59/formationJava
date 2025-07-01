@@ -24,8 +24,8 @@ public class ProductTest {
         product = Product.builder().name("burger").type(Type.FOOD).quality(20).sellIn(5).build();
         shop.addProduct(product);
         List<Product> result = shop.update();
-        int productQuality = result.get(1).getQuality();
-        int productSellIn = result.get(1).getSellIn();
+        int productQuality = result.getFirst().getQuality();
+        int productSellIn = result.getFirst().getSellIn();
         Assertions.assertEquals(19,productQuality);
         Assertions.assertEquals(4,productSellIn);
 
@@ -62,7 +62,7 @@ public class ProductTest {
 
     @Test
     public void WhenProductTypeLaitier_Quality20_ThenQualityIs18(){
-        product = Product.builder().name("fromage").type(Type.LAITIER).quality(20).sellIn(0).build();
+        product = Product.builder().name("fromage").type(Type.LAITIER).quality(20).sellIn(5).build();
         shop.addProduct(product);
         List<Product> result = shop.update();
         int productQuality = result.getFirst().getQuality();
