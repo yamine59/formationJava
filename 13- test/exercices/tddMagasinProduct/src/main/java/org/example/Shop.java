@@ -9,36 +9,44 @@ public class Shop {
     public void addProduct(Product product){
         productList.add(product);
     }
+
     public List<Product> update(){
         for (Product product : productList){
+            int quality = product.getQuality();
+            int sellIn = product.getSellIn();
 
-            if (product.getQuality() >= 50){
-                product.setQuality(50);
-                break;
+            sellIn = sellIn - 1;
+            if (sellIn < 0) {
+                sellIn = 0;
             }
-            if (product.getQuality() <= 0){
-                product.setQuality(0);
-                break;
-            }
-            if (product.getType().equals(Type.LAITIER)){
-                if (product.getName().equals("brie vieilli")){
-                    product.setQuality(product.getQuality()+1);
-                    break;
+
+            if (quality >= 50){
+                quality = 50;
+            } else if (quality <= 0){
+                quality = 0;
+            } else {
+
+                if (product.getType().equals(Type.LAITIER)){
+                    if (product.getName().equals("brie vieilli")){
+                        quality = quality + 1;
+
+                    } else if (sellIn == 0){
+                        quality = quality - 4;
+                    } else {
+                        quality = quality - 2;
+
+                    }
+                } else if (sellIn == 0){
+                    quality = quality - 2;
+
+                } else {
+                    quality = quality - 1;
+
                 }
-                product.setQuality(product.getQuality()-1);
             }
 
-           if (product.getSellIn()==0){
-               product.setQuality(product.getQuality()-2);
-           }else {
-               product.setQuality(product.getQuality()-1);
-           }
-
-
-
-
-            product.setSellIn(product.getSellIn() - 1);
-
+            product.setSellIn(sellIn);
+            product.setQuality(quality);
         }
         return productList;
     }
