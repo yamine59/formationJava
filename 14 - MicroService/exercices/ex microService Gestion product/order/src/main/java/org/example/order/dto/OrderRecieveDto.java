@@ -2,9 +2,9 @@ package org.example.order.dto;
 
 import lombok.Builder;
 import lombok.Data;
-import org.example.order.model.Customer;
-import org.example.order.model.Order;
-import org.example.order.model.Product;
+import org.example.order.entity.Customer;
+import org.example.order.entity.Order;
+import org.example.order.entity.Product;
 
 @Builder
 @Data

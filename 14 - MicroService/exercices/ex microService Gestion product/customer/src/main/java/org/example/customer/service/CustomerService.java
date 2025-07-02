@@ -1,13 +1,10 @@
 package org.example.customer.service;
 
-import org.example.customer.model.Customer;
+import org.example.customer.entity.Customer;
 import org.example.customer.repository.CustomerRepo;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class CustomerService {

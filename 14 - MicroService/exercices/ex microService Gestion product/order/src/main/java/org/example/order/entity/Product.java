@@ -1,4 +1,4 @@
-package org.example.order.model;
+package org.example.order.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

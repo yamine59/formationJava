@@ -1,8 +1,7 @@
 package org.example.product.controller;
 
-import org.example.product.model.Product;
+import org.example.product.entity.Product;
 import org.example.product.service.ProductService;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

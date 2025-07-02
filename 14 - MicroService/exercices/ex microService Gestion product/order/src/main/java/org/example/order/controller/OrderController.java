@@ -1,7 +1,7 @@
 package org.example.order.controller;
 
 import org.example.order.dto.OrderRecieveDto;
-import org.example.order.model.Order;
+import org.example.order.entity.Order;
 import org.example.order.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 

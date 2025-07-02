@@ -2,15 +2,13 @@ package org.example.order.service;
 
 import org.example.order.Repository.OrderRepo;
 import org.example.order.dto.OrderRecieveDto;
-import org.example.order.model.Customer;
-import org.example.order.model.Order;
-import org.example.order.model.Product;
+import org.example.order.entity.Customer;
+import org.example.order.entity.Order;
+import org.example.order.entity.Product;
 import org.example.order.util.RestOrder;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class OrderService {

@@ -1,6 +1,6 @@
 package org.example.customer.controller;
 
-import org.example.customer.model.Customer;
+import org.example.customer.entity.Customer;
 import org.example.customer.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,11 +1,10 @@
-package org.example.order.model;
+package org.example.order.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.order.dto.OrderRecieveDto;
 
 @AllArgsConstructor
 @NoArgsConstructor

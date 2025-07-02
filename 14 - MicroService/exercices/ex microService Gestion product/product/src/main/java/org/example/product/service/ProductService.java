@@ -1,12 +1,10 @@
 package org.example.product.service;
 
-import org.example.product.model.Product;
+import org.example.product.entity.Product;
 import org.example.product.repository.ProductRepo;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class ProductService {
