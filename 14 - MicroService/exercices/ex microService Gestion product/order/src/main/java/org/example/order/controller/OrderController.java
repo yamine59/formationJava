@@ -1,6 +1,6 @@
 package org.example.order.controller;
 
-import org.example.order.dto.OrderRecieveDto;
+import org.example.order.dto.OrderReceiveDto;
 import org.example.order.entity.Order;
 import org.example.order.service.OrderService;
 import org.springframework.web.bind.annotation.*;
@@ -27,12 +27,12 @@ public class OrderController {
     }
 
     @PostMapping
-    public Order saveOrder(@RequestBody OrderRecieveDto order){
+    public Order saveOrder(@RequestBody OrderReceiveDto order){
         return orderService.save(order);
     }
 
     @PutMapping("/{id}")
-    public Order updateOrder(@PathVariable int id,@RequestBody OrderRecieveDto order){
+    public Order updateOrder(@PathVariable int id,@RequestBody OrderReceiveDto order){
         return orderService.Update(id,order);
     }
 

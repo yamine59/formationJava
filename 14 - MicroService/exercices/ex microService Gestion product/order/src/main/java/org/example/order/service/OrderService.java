@@ -1,7 +1,7 @@
 package org.example.order.service;
 
 import org.example.order.Repository.OrderRepo;
-import org.example.order.dto.OrderRecieveDto;
+import org.example.order.dto.OrderReceiveDto;
 import org.example.order.entity.Customer;
 import org.example.order.entity.Order;
 import org.example.order.entity.Product;
@@ -42,40 +42,26 @@ public class OrderService {
         return orders;
     }
 
-    public Order save (OrderRecieveDto order){
+    public Order save (OrderReceiveDto orderDto){
 
         RestOrder<Customer> customerRestOrder = new RestOrder<>();
         RestOrder<Product> productRestOrder = new RestOrder<>();
-        Customer customer = customerRestOrder.get("http://localhost:8080/api/customer/"+order.getCustomer(),Customer.class);
-        Product product = productRestOrder.get("http://localhost:8081/api/product/"+order.getProduct(),Product.class);
+        Customer customer = customerRestOrder.get("http://localhost:8080/api/customer/"+orderDto.getCustomer(),Customer.class);
+        Product product = productRestOrder.get("http://localhost:8081/api/product/"+orderDto.getProduct(),Product.class);
 
-        Order order1 = Order.builder()
-                .id(order.getId())
-                .description(order.getDescription())
-                .customer(customer)
-                .product(product)
-                .customerId(order.getCustomer())
-                .productId(order.getProduct())
-                .build();
-        return orderRepo.save(order1);
+        Order order = orderDto.dtoToEntity(customer,product);
+        return orderRepo.save(order);
     }
 
-    public Order Update (int id ,OrderRecieveDto order){
+    public Order Update (int id , OrderReceiveDto orderDto){
         RestOrder<Customer> customerRestOrder = new RestOrder<>();
         RestOrder<Product> productRestOrder = new RestOrder<>();
-        Customer customer = customerRestOrder.get("http://localhost:8080/api/customer"+order.getCustomer(),Customer.class);
-        Product product = productRestOrder.get("http://localhost:8081/api/product"+order.getProduct(),Product.class);
+        Customer customer = customerRestOrder.get("http://localhost:8080/api/customer"+orderDto.getCustomer(),Customer.class);
+        Product product = productRestOrder.get("http://localhost:8081/api/product"+orderDto.getProduct(),Product.class);
 
-        Order order1 = Order.builder()
-                .id(order.getId())
-                .description(order.getDescription())
-                .customer(customer)
-                .product(product)
-                .customerId(order.getCustomer())
-                .productId(order.getProduct())
-                .build();
-
-        return orderRepo.save(order1);
+        Order order = orderDto.dtoToEntity(customer,product);
+        order.setId(id);
+        return orderRepo.save(order);
     }
 
     public void delete(int id){

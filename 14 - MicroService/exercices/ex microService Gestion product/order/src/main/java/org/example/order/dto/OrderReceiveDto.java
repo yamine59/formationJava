@@ -8,7 +8,7 @@ import org.example.order.entity.Product;
 
 @Builder
 @Data
-public class OrderRecieveDto {
+public class OrderReceiveDto {
     private int id;
     private String description;
     private int customer;
@@ -20,6 +20,8 @@ public class OrderRecieveDto {
                 .description(description)
                 .customer(customer)
                 .product(product)
+                .customerId(customer.getCustomer_id())
+                .productId(product.getProduct_id())
                 .build();
     }
 }
