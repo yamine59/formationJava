@@ -50,6 +50,6 @@ function mentionScore(score) {
 
 
 
-
+afficherScores(scores)
 console.log(moyenneScores(scores))
 console.log(meilleurScore(scores))
