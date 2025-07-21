@@ -1,12 +1,9 @@
 let scores = [];
-scores.push(10, 20, 30, 40, 50)
+scores.push(45, 100, 69, 85, 50)
 
 function afficherScores(score){
-    
-    for (let i = 0; i < score.length; i++) {
-        console.log(score[i])
-        mentionScore(score[i])
-    }
+  console.log("Scores des joueurs : ");
+  console.log(score)
 }
 
 function moyenneScores(score){
@@ -14,7 +11,7 @@ function moyenneScores(score){
     for (let i = 0; i < score.length; i++) {
         somme += score[i];
     }
-    return somme / score.length;
+    console.log("Score moyen : " + somme/score.length);
 }
 
 function meilleurScore(score){
@@ -24,32 +21,38 @@ function meilleurScore(score){
             meilleur = score[i];
         }
     } 
-    return meilleur
+    console.log("Score moyen : " + meilleur);
 }
 
 function mentionScore(score) {
-    switch (true) {
-        case (score < 50):
-            console.log("Insuffisant");
-            break;
-        case (score >= 50 && score <= 64):
-            console.log("Passable");
-            break;
-        case (score >= 65 && score <= 79):
-            console.log("Bien");
-            break;
-        case (score >= 80 && score <= 89):
-            console.log("Très Bien");
-            break;
-        case (score >= 90 && score <= 100):
-            console.log("Excellent");
-            break;
-       
+    for (let i = 0 ; i < scores.length; i++) {
+        let index = i+1
+        switch (true) {
+            case (score[i] < 50):
+                console.log("Joueur "+ index+" : Insuffisant");
+                break;
+            case (score[i] >= 50 && score[i] <= 64):
+                console.log("Joueur "+ index+" : Passable");
+                break;
+            case (score[i] >= 65 && score[i] <= 79):
+                console.log("Joueur "+ index+" : Bien");
+                break;
+            case (score[i] >= 80 && score[i] <= 89):
+                console.log("Joueur "+ index+" : Très bien");
+                break;
+            case (score[i] >= 90 && score[i] <= 100):
+                console.log("Joueur "+ index+" : Excellent");
+                break;
+           
+        }
+        
     }
+    
 }
 
 
 
 afficherScores(scores)
-console.log(moyenneScores(scores))
-console.log(meilleurScore(scores))
+moyenneScores(scores)
+meilleurScore(scores)
+mentionScore(scores)
