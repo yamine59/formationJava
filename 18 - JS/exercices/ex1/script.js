@@ -1,4 +1,4 @@
-let scores = [];
+const scores = [];
 scores.push(45, 100, 69, 85, 50)
 
 function afficherScores(score){
