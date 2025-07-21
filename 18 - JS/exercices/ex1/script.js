@@ -9,21 +9,22 @@ function afficherScores(score){
     }
 }
 
-function moyenneScores(scores){
+function moyenneScores(score){
     let somme = 0;
-    for (let i = 0; i < scores.length; i++) {
-        somme += scores[i];
+    for (let i = 0; i < score.length; i++) {
+        somme += score[i];
     }
-    return somme / scores.length;
+    return somme / score.length;
 }
 
-function meilleurScore(scores){
-    let meilleur = scores[0];
-    for (let i = 1; i < scores.length; i++) {
-        if (scores[i] > meilleur) {
-            meilleur = scores[i];
+function meilleurScore(score){
+    let meilleur = score[0];
+    for (let i = 1; i < score.length; i++) {
+        if (score[i] > meilleur) {
+            meilleur = score[i];
         }
     } 
+    return meilleur
 }
 
 function mentionScore(score) {
@@ -48,7 +49,7 @@ function mentionScore(score) {
 }
 
 
-afficherScores(scores)
 
-moyenneScores.scores
-meilleurScore.scores
+
+console.log(moyenneScores(scores))
+console.log(meilleurScore(scores))
