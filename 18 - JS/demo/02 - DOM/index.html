@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation du DOM</title>
+</head>
+<body>
+    <h1>Manipulation du DOM</h1>
+    <div id="zone">Salut</div>
+
+    <script>
+        const zoneCible = document.getElementById("zone");
+        zoneCible.textContent = "Bonjour";
+        zoneCible.style.color = "red";
+        zoneCible.style.fontWeight = "bold";
+
+        const nouvelElement = document.createElement("p");
+        nouvelElement.textContent = "Hello, je suis nouveau"
+        document.body.appendChild(nouvelElement)
+    </script>
+</body>
+</html>
