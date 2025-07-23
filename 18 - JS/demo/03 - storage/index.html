@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> le storage en js</h1>
+
+    <input type="text" id="pseudo">
+
+    <script>
+        const input = document.getElementById('pseudo')
+        
+        input.addEventListener("input", () => {
+            localStorage.setItem("pseudo", input.value) 
+        })
+
+        // recharger automatiquement a l ouvberture de la page
+        window.addEventListener("DOMContentLoaded", () => {
+            const saved = localStorage.getItem("pseudo")
+            if (saved) {
+                input.value = saved
+            }
+        })
+    </script>
+    
+</body>
+</html>

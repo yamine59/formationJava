@@ -66,31 +66,35 @@ console.log("mentions des joueurs : ",mentionscores(scores));
 // console.log("Meilleur scores : " , meilleurscores(scores));
 // console.table(mentionscores(scores));
 
+let resultExcellent = [];
+let resultMoyen = [];
+let resultInsuffisant = [];
+
 function estExcellent(score){
     if (score>= 90) {
-        return true
+        return resultExcellent.push(score)
     }
-    return false
+    return resultExcellent
 }
 function estMoyen(score){
     if (score >= 50 && score <= 80) {
-        return true
+        return resultMoyen.push(score)
     }
-    return false
+    return resultMoyen
 }
 function estInsuffisant(score){
     if (score < 50) {
-        return true
+        return resultInsuffisant.push(score)
     }
-    return false
+    return resultInsuffisant
 }
 
 function filtersScores(scores,callback){
-    let result = []
+  
     for (let i = 0; i < scores.length; i++) {
-         result.push(scores[i]+" est " + callback(scores[i]) ) 
+        callback(scores[i]) 
     }
-    return result
+    return callback(scores)
     
 }
 console.log(scores);

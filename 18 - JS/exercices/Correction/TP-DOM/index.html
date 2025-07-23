@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>TP DOM – Profil Utilisateur</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="light">
+
+  <h1>Créer ton profil</h1>
+  <p id="description"></p>
+  <button id="changeDescriptionBtn">Changer de description</button>
+
+  <div>
+    <label for="pseudo">Pseudo :</label>
+    <input type="text" id="pseudo" />
+    <span id="pseudoError" style="color:red;display:none;">Lettres uniquement</span>
+  </div>
+
+  <div>
+    <p>Choisis ton avatar :</p>
+    <img src="./assets/homme.png" class="avatar-preview" data-avatar="A">
+    <img src="./assets/femme.png" class="avatar-preview" data-avatar="B">
+    <img src="./assets/homme2.png" class="avatar-preview" data-avatar="C">
+    <img src="./assets/femme2.png" class="avatar-preview" data-avatar="D">
+  </div>
+
+  <button id="nextBtn" disabled>Suivant</button>
+
+  <div class="theme-toggle" id="toggleTheme">
+        <label class="switch">
+        <input type="checkbox" id="toggleThemeCheckbox">
+        <span class="slider"></span>
+    </label>
+  </div>
+
+
+
+
+  <div id="profileCard"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

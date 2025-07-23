@@ -1,0 +1,175 @@
+:root {
+  --color-bg-light: #f9f9f9;
+  --color-text-light: #222;
+  --color-bg-dark: #292929;
+  --color-text-dark: #eee;
+  --color-primary: #08c1ff;
+  --color-accent: #3b82f6;
+  --color-border: #ddd;
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+body.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#description {
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  outline: none;
+  width: 200px;
+  margin-top: 0.25rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--color-accent);
+}
+
+#nextBtn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.avatar-preview {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  margin: 5px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.avatar-preview:hover {
+  transform: scale(1.05);
+}
+
+.selected {
+  border-color: var(--color-primary);
+}
+
+.card {
+  background-color: white;
+  color: black;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  max-width: 320px;
+  text-align: center;
+}
+
+body.dark .card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.card img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+#pseudoError {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Solution avec checkbox pour dark mode */
+
+.switch {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--color-accent);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+
+
