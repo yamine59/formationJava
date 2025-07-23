@@ -23,14 +23,11 @@ let currentDescription = "";
 
 // ---------------
 // Thème
-// ---------------*
-let checked;
+// ---------------
 themeToggleCheckbox.addEventListener("change", () => {
   const isDark = themeToggleCheckbox.checked;
   body.classList.toggle("dark", isDark);
   body.classList.toggle("light", !isDark);
-  checked = themeToggleCheckbox.value;
-  
 });
 
 
@@ -47,7 +44,6 @@ function setRandomDescription() {
   descDisplay.textContent = newDesc;
 }
 
-window.addEventListener("DOMContentLoaded", setRandomDescription);
 changeDescBtn.addEventListener("click", setRandomDescription);
 
 // ---------------
@@ -56,7 +52,6 @@ changeDescBtn.addEventListener("click", setRandomDescription);
 function isPseudoValid(str) {
   return /^[a-zA-Z]+$/.test(str);
 }
-
 
 pseudoInput.addEventListener("input", () => {
   if (isPseudoValid(pseudoInput.value)) {
@@ -75,7 +70,6 @@ avatarPreviews.forEach(img => {
     avatarPreviews.forEach(i => i.classList.remove("selected"));
     img.classList.add("selected");
     selectedAvatar = img.src;
-
     updateNextButtonState();
   });
 });
@@ -92,91 +86,77 @@ function updateNextButtonState() {
   nextBtn.disabled = !isReady;
 }
 
+function savePreferences(pseudo, description, avatar, theme) {
+  const data = {
+    pseudo,
+    description,
+    avatar,
+    theme
+  };
+  localStorage.setItem("userPreferences", JSON.stringify(data) )
+}
 
+function showProfileCard({pseudo, description, avatar, theme}) {
+  body.classList.toggle("dark", theme === "dark");
+  body.classList.toggle("light", theme !== "dark");
+  
+  const card = document.createElement("div");
+  card.className = "card";
 
+  const img = document.createElement("img");
+  img.src = avatar;
+  img.style.width = "100px";
 
+  const name = document.createElement("h2");
+  name.textContent = pseudo;
 
+  const desc = document.createElement("p");
+  desc.textContent = description;
+
+  const restartBtn = document.createElement("button");
+  restartBtn.textContent = "Recommencer";
+  restartBtn.addEventListener("click", () => {
+    localStorage.removeItem("userPreferences");
+    window.location.reload()
+  });
+
+  card.appendChild(img);
+  card.appendChild(name);
+  card.appendChild(desc);
+  card.appendChild(restartBtn);
+
+  document.body.innerHTML = ""; // Supprime tout
+  document.body.appendChild(card);
+  document.body.appendChild(themeToggle); // On garde le toggle thème
+}
 
 // ---------------
 // Validation finale
 // ---------------
 nextBtn.addEventListener("click", () => {
   const pseudo = pseudoInput.value;
+  const theme = themeToggleCheckbox.checked ? "dark" : "light";
 
-  const card = document.createElement("div");
-  card.className = "card";
+  savePreferences(pseudo, currentDescription, selectedAvatar, theme);
+  showProfileCard({
+    pseudo,
+    description : currentDescription,
+    avatar : selectedAvatar,
+    theme
+  });
 
-  const avatar = document.createElement("img");
-  avatar.src = selectedAvatar;
-  avatar.style.width = "100px";
 
-  const name = document.createElement("h2");
-  name.textContent = pseudo;
-
-  const desc = document.createElement("p");
-  desc.textContent = currentDescription;
-
-  const restartBtn = document.createElement("button");
-  restartBtn.textContent = "Recommencer";
-  restartBtn.addEventListener("click", () => window.location.reload());
-
-  const user = {
-    pseudoUser : pseudoInput.value,
-    descriptionUser : currentDescription,
-    avatarUser: selectedAvatar,
-    themeUser: themeToggle
-  }
-  
-  localStorage.setItem("user",JSON.stringify(user))
-
- 
-  
-  card.appendChild(avatar);
-  card.appendChild(name);
-  card.appendChild(desc);
-  card.appendChild(restartBtn);
-
-  
-  document.body.innerHTML = ""; // Supprime tout
-  document.body.appendChild(card);
-  document.body.appendChild(themeToggle); // On garde le toggle thème
 });
 
-
+// -------------
+// Chargement initial
+// -------------
 window.addEventListener("DOMContentLoaded", () => {
- 
-  const saved = localStorage.getItem("user")
+  const saved = localStorage.getItem("userPreferences");
   if (saved) {
-    const userObj = JSON.parse(saved)
-
-    const card = document.createElement("div");
-    card.className = "card";
-
-    const avatar = document.createElement("img");
-    avatar.src = userObj.avatarUser;
-    avatar.style.width = "100px";
-
-    const name = document.createElement("h2");
-    name.textContent = userObj.pseudoUser;
-
-    const desc = document.createElement("p");
-    desc.textContent = userObj.descriptionUser;
-
-    const restartBtn = document.createElement("button");
-    restartBtn.textContent = "Recommencer";
-    restartBtn.addEventListener("click", () => {
-      window.location.reload()
-      localStorage.removeItem("user")
-    });
-
-
-
-    card.appendChild(avatar);
-    card.appendChild(name);
-    card.appendChild(desc);
-    card.appendChild(restartBtn);
-    document.body.innerHTML = ""; // Supprime tout
-    document.body.appendChild(card);
-    document.body.appendChild(themeToggle); // On garde le toggle thème
+    const data = JSON.parse(saved);
+    showProfileCard(data);
+  } else {
+    setRandomDescription();
   }
 })
