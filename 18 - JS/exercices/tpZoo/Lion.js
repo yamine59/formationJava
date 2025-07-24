@@ -2,10 +2,8 @@ import { Animal } from "./Animal.js";
 
 export class Lion extends Animal {
 
-    constructor(nom,age,espece,cri){
+    constructor(nom,age){
         super(nom,age)
-        this.espece = espece;
-        this.cri = cri
     }
 
     crier(){
