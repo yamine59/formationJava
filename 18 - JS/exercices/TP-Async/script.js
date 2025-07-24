@@ -9,15 +9,18 @@ function attendre(ms) {
 async function animerProgress(id, duree) {  
    
   const progress = document.querySelector(`#${id}Progress`);
-    progress.max = duree
+  const stage = document.querySelector(`#${id}`);
+  const resultat = document.querySelector(`#resultat`);
+  progress.max = duree
     try {
         
         let i = 0;
-        setInterval(() => {
+        const interval = setInterval(() => {
             i++;
             progress.value = i;
             if (i >= duree) {
-                clearInterval();
+                stage.innerText = `La mission de ${id} est terminée !`;
+                clearInterval(interval);
             }
         }, 1000 );
         
