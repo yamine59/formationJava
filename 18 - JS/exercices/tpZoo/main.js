@@ -22,7 +22,6 @@ ajouter.addEventListener("click", (e) => {
     } else if (selectedEspece === "Perroquet") {
         animal = new Perroquet(nom.value, age.value, selectedEspece, cri.value);
     } else {
-        // Optionnel : gérer d'autres espèces
         animal = {
             nom: nom.value,
             age: age.value,
@@ -36,7 +35,6 @@ ajouter.addEventListener("click", (e) => {
 
     tab.push(animal);
 
-    // Crée une carte avec un bouton spécifique
     const card = document.createElement("div");
     card.className = "bg-white rounded-lg shadow-lg p-4 m-2 w-64";
 
