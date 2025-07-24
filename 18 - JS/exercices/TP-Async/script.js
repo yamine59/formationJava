@@ -10,7 +10,6 @@ async function animerProgress(id, duree) {
    
   const progress = document.querySelector(`#${id}Progress`);
   const stage = document.querySelector(`#${id}`);
-  const resultat = document.querySelector(`#resultat`);
   progress.max = duree
     try {
         
