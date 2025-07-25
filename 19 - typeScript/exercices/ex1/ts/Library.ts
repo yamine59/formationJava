@@ -8,7 +8,6 @@ export class Library {
     }
     
     addBook(book: Book){
-
         this.books.push(book)
     }
     removeBook(title: string) :void{
@@ -18,7 +17,7 @@ export class Library {
         return this.books.find(b => b.title === title)
     }
     listAvailableBooks() : Book[] {
-        return this.books.filter(b => b.isAvailable)
+        return this.books.filter(b => b.isAvailable === true)
     }
     getBooksByAuthor(authorName: string) : Book[] {
         return this.books.filter(b => b.author.name === authorName)

@@ -12,7 +12,7 @@ export class Library {
         return this.books.find(b => b.title === title);
     }
     listAvailableBooks() {
-        return this.books.filter(b => b.isAvailable);
+        return this.books.filter(b => b.isAvailable === true);
     }
     getBooksByAuthor(authorName) {
         return this.books.filter(b => b.author.name === authorName);
