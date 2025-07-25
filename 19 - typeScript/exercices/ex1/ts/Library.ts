@@ -1,0 +1,26 @@
+import { Book } from "./interface.js";
+
+export class Library {
+    books:Book[]
+
+    constructor() {
+        this.books = []; // Initialize the books array
+    }
+    
+    addBook(book: Book){
+
+        this.books.push(book)
+    }
+    removeBook(title: string){
+        this.books = this.books.filter(b => b.title !== title)
+    }
+    findBookByTitle(title: string){
+        return this.books.filter(b => b.title === title)
+    }
+    listAvailableBooks(){
+        return this.books.filter(b => b.isAvailable === true)
+    }
+    getBooksByAuthor(authorName: string){
+        return this.books.filter(b => b.author.name === authorName )
+    }
+}

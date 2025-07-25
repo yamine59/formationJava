@@ -1,44 +1,40 @@
 
 const mission = document.querySelector(`#launch`);
-
+const resultat = document.querySelector(`#resultat`);
  
 function attendre(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function animerProgress(id, duree) {  
-   
-  const progress = document.querySelector(`#${id}Progress`);
-  const stage = document.querySelector(`#${id}`);
-  progress.max = duree
-    try {
-        
-        let i = 0;
-        const interval = setInterval(() => {
-            i++;
-            progress.value = i;
-            if (i >= duree) {
-                stage.innerText = `La mission de ${id} est terminée !`;
-                clearInterval(interval);
-            }
-        }, 1000 );
-        
-    } catch (error) {
-        console.error(error)
-    }
-     
- 
+    const progress = document.querySelector(`#${id} progress`);
+    const stage = document.querySelector(`#${id}`);
+    
+    progress.max = duree;
+    let i = 0;
+    const interval = setInterval(() => {
+        i += 0.01;
+        progress.value = i;
+        if (i >= duree) {
+            stage.innerText = `La mission de ${id} est terminée !`;
+            clearInterval(interval);
+        }
+    }, 10 );
 }
 
 async function lancerMission() {
  
     try {
-        animerProgress("preparation",2)
+    
+        animerProgress("preparation",5)
+        await attendre(5000)
+        animerProgress("expedition",2)
         await attendre(2000)
-        animerProgress("expedition",1.5)
-        await attendre(1500)
-        animerProgress("livraison",2.5)
+        animerProgress("livraison",10)
+        await attendre(10000)
+        resultat.innerText = `Tout les mission sont terminée avec succès !`;
     } catch (error) {
+        resultat.innerText = `Erreur lors de les missions !`;
         console.error(error)
     }
     
