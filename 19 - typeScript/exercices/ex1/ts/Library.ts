@@ -4,23 +4,23 @@ export class Library {
     books:Book[]
 
     constructor() {
-        this.books = []; // Initialize the books array
+        this.books  = []; // Initialize the books array
     }
     
     addBook(book: Book){
 
         this.books.push(book)
     }
-    removeBook(title: string){
+    removeBook(title: string) :void{
         this.books = this.books.filter(b => b.title !== title)
     }
-    findBookByTitle(title: string){
-        return this.books.filter(b => b.title === title)
+    findBookByTitle(title: string) : Book | undefined{
+        return this.books.find(b => b.title === title)
     }
-    listAvailableBooks(){
-        return this.books.filter(b => b.isAvailable === true)
+    listAvailableBooks() : Book[] {
+        return this.books.filter(b => b.isAvailable)
     }
-    getBooksByAuthor(authorName: string){
-        return this.books.filter(b => b.author.name === authorName )
+    getBooksByAuthor(authorName: string) : Book[] {
+        return this.books.filter(b => b.author.name === authorName)
     }
 }

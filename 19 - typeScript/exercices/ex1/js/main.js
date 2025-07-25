@@ -1,17 +1,6 @@
+import { createBook, toggleAvailability } from "./fonction.js";
 import { Genres } from "./interface.js";
 import { Library } from "./Library.js";
-function createBook(title, author, pages) {
-    let book = {
-        title: title,
-        author: author,
-        pages: pages,
-        isAvailable: true
-    };
-    return book;
-}
-function toggleAvailability(book) {
-    book.isAvailable = !book.isAvailable;
-}
 let library = new Library;
 let author1 = {
     name: "yamine",
@@ -32,9 +21,14 @@ library.addBook(book);
 library.addBook(book2);
 library.addBook(book3);
 library.addBook(book4);
+console.log("tous les livres");
 console.table(library.books);
-console.table(library.findBookByTitle("soleil"));
+console.log("livre avec le titre soleil");
+console.log(library.findBookByTitle("soleil"));
+console.log("livres de l'autheur yamine");
 console.table(library.getBooksByAuthor("yamine"));
+console.log("livres disponibles");
 console.table(library.listAvailableBooks());
-library.removeBook("pain");
+console.log(library.removeBook("pain"));
+console.log("livres apres suppression");
 console.table(library.books);
