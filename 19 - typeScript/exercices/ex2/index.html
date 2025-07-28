@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+          <div id="contacts">
+        <h2>Contacts</h2>
+        <div id="listContacts" class="d-flex  gap-5"></div>
+        <button id="addContact">Ajouter</button>
+    </div>
+    <div id="detailUser">
+        <form action="" class="mt-5">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nom" id="lastname" readonly>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Prenom" id="firsname" readonly>
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" id="birthdate" readonly >
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" id="email" readonly>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="telephone" id="phone" readonly>
+            </div>
+            <div class="form-group">
+                <img type="text" class="form-control" placeholder="url avatar" id="avatar" readonly>
+            </div>
+        </form>
+    </div>
+    </div>
+  
+
+    <div class="containerForm d-none" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <form action="" class="mt-5">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nom" id="lastname">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Prenom" id="firsname">
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" id="birthdate">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" id="email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="telephone" id="phone">
+            </div>
+            <div class="form-group">
+            </div>
+            <input type="submit" class="btn btn-primary" id="submitUser" value="Envoyer">
+        </form>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
+

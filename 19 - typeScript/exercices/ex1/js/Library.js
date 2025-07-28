@@ -1,6 +1,6 @@
 export class Library {
     constructor() {
-        this.books = []; // Initialize the books array
+        this.books = [];
     }
     addBook(book) {
         this.books.push(book);

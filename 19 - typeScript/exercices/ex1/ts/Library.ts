@@ -1,12 +1,8 @@
 import { Book } from "./interface.js";
 
 export class Library {
-    books:Book[]
+    books:Book[] = [];
 
-    constructor() {
-        this.books  = []; // Initialize the books array
-    }
-    
     addBook(book: Book){
         this.books.push(book)
     }
